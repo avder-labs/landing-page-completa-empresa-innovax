@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
 
-  const serviceSelect =
-    document.getElementById('servicioSelect');
+  // Ajustado para buscar por el ID o por el name que tiene index.html
+  const serviceSelect = document.getElementById('servicioSelect') || document.querySelector('select[name="servicio"]');
 
 
   /* =====================================================
@@ -19,45 +19,31 @@ document.addEventListener('DOMContentLoaded', function () {
   ===================================================== */
 
   if (year) {
-    year.textContent =
-      new Date().getFullYear();
+    year.textContent = new Date().getFullYear();
   }
 
 
 
   /* =====================================================
-     HEADER AL HACER SCROLL
+     HEADER AL HACER SCROLL Y BOTÓN VOLVER ARRIBA
   ===================================================== */
 
   window.addEventListener(
     'scroll',
     function () {
 
-      const y =
-        window.scrollY;
+      const y = window.scrollY;
 
       if (header) {
-
-        header.classList.toggle(
-          'scrolled',
-          y > 30
-        );
-
+        header.classList.toggle('scrolled', y > 30);
       }
 
       if (backTop) {
-
-        backTop.classList.toggle(
-          'show',
-          y > 500
-        );
-
+        backTop.classList.toggle('show', y > 500);
       }
 
     },
-    {
-      passive:true
-    }
+    { passive: true }
   );
 
 
@@ -68,17 +54,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (backTop) {
 
-    backTop.addEventListener(
-      'click',
-      function () {
-
-        window.scrollTo({
-          top:0,
-          behavior:'smooth'
-        });
-
-      }
-    );
+    backTop.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
 
   }
 
@@ -88,52 +69,28 @@ document.addEventListener('DOMContentLoaded', function () {
      MENÚ MÓVIL
   ===================================================== */
 
-  if (
-    menuToggle &&
-    mainNav
-  ) {
+  if (menuToggle && mainNav) {
 
-    menuToggle.addEventListener(
-      'click',
-      function () {
+    menuToggle.addEventListener('click', function () {
 
-        const open =
-          mainNav.classList.toggle(
-            'open'
-          );
+      const open = mainNav.classList.toggle('open');
 
-        menuToggle.setAttribute(
-          'aria-expanded',
-          open
-            ? 'true'
-            : 'false'
-        );
+      menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
 
-      }
-    );
+    });
 
 
-    mainNav
-      .querySelectorAll('a')
-      .forEach(function (link) {
+    mainNav.querySelectorAll('a').forEach(function (link) {
 
-        link.addEventListener(
-          'click',
-          function () {
+      link.addEventListener('click', function () {
 
-            mainNav.classList.remove(
-              'open'
-            );
+        mainNav.classList.remove('open');
 
-            menuToggle.setAttribute(
-              'aria-expanded',
-              'false'
-            );
-
-          }
-        );
+        menuToggle.setAttribute('aria-expanded', 'false');
 
       });
+
+    });
 
   }
 
@@ -145,34 +102,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (serviceSelect) {
 
-    const params =
-      new URLSearchParams(
-        window.location.search
-      );
-
-    const service =
-      params.get('servicio');
-
+    const params = new URLSearchParams(window.location.search);
+    const service = params.get('servicio');
 
     if (service) {
 
-      const option =
-        [...serviceSelect.options]
-          .find(function (o) {
-
-            return (
-              o.value.toLowerCase() ===
-              service.toLowerCase()
-            );
-
-          });
-
+      const option = [...serviceSelect.options].find(function (o) {
+        return o.value.toLowerCase() === service.toLowerCase();
+      });
 
       if (option) {
-
-        serviceSelect.value =
-          option.value;
-
+        serviceSelect.value = option.value;
       }
 
     }
@@ -182,130 +122,73 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   /* =====================================================
-     FORMULARIO
+     FORMULARIO DE CONTACTO (AJAX)
   ===================================================== */
 
   if (form) {
 
-    form.addEventListener(
-      'submit',
-      async function (event) {
+    form.addEventListener('submit', async function (event) {
 
-        event.preventDefault();
+      event.preventDefault();
 
-
+      if (status) {
         status.textContent = '';
-
-        status.className =
-          'form-status';
-
-
-        const honeypot =
-          form.querySelector(
-            '[name="empresa_web"]'
-          );
-
-
-        if (
-          honeypot &&
-          honeypot.value
-        ) {
-
-          return;
-
-        }
-
-
-        const button =
-          form.querySelector(
-            'button[type="submit"]'
-          );
-
-
-        const original =
-          button.innerHTML;
-
-
-        button.disabled =
-          true;
-
-
-        button.innerHTML =
-          'Enviando...';
-
-
-        try {
-
-          const response =
-            await fetch(
-              form.action,
-              {
-                method:'POST',
-
-                body:
-                  new FormData(form),
-
-                headers:{
-                  'X-Requested-With':
-                    'XMLHttpRequest'
-                }
-              }
-            );
-
-
-          const data =
-            await response.json();
-
-
-          if (!data.success) {
-
-            throw new Error(
-              data.message ||
-              'No se pudo enviar.'
-            );
-
-          }
-
-
-          status.textContent =
-            data.message ||
-            'Solicitud enviada correctamente.';
-
-
-          status.classList.add(
-            'ok'
-          );
-
-
-          form.reset();
-
-
-        } catch (error) {
-
-          status.textContent =
-            'No se pudo enviar automáticamente. ' +
-            'Si estás probando la web desde tu PC, ' +
-            'súbela a un hosting con PHP para activar el formulario.';
-
-
-          status.classList.add(
-            'err'
-          );
-
-
-        } finally {
-
-          button.disabled =
-            false;
-
-          button.innerHTML =
-            original;
-
-        }
-
+        status.className = 'form-status';
       }
-    );
 
+      // Honeypot anti-spam
+      const honeypot = form.querySelector('[name="empresa_web"]');
+
+      if (honeypot && honeypot.value) {
+        return;
+      }
+
+      const button = form.querySelector('button[type="submit"]');
+      const originalText = button ? button.innerHTML : '';
+
+      if (button) {
+        button.disabled = true;
+        button.innerHTML = 'Enviando...';
+      }
+
+      try {
+
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+          }
+        });
+
+        const data = await response.json();
+
+        if (!data.success) {
+          throw new Error(data.message || 'No se pudo enviar la solicitud.');
+        }
+
+        if (status) {
+          status.textContent = data.message || 'Solicitud enviada correctamente.';
+          status.classList.add('success');
+        }
+
+        form.reset();
+      } 
+      
+      catch (error) {
+        if (status) {
+          status.textContent = error.message || 'Ocurrió un error al enviar el formulario.';
+          status.classList.add('error');
+        }
+
+      } 
+      
+      finally {
+        if (button) {
+          button.disabled = false;
+          button.innerHTML = originalText;
+        }
+      }
+    });
   }
-
 });

@@ -1,120 +1,37 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
   <meta charset="UTF-8">
-
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
-
->
-
-  <title>
-    Proyecto | INNOVAX Ingenieros
-  </title>
-
-  <link
-    rel="icon"
-    href="assets/img/logo.png"
-    type="image/png"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap"
-    rel="stylesheet"
-  >
-
-  <link
-    rel="stylesheet"
-    href="css/style.css"
-  >
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto | INNOVAX Ingenieros</title>
+  <link rel="icon" href="assets/img/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<header
-  class="site-header"
-  id="header"
->
-
+<header class="site-header" id="header">
   <div class="container header-inner">
-<a
-  class="brand"
-  href="index.html"
->
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo.png" alt="INNOVAX Ingenieros" class="brand-logo">
+      <span class="brand-caption">TECNOLOGÍA Y ELECTRICIDAD</span>
+    </a>
 
-  <img
-    src="assets/img/logo.png"
-    alt="INNOVAX Ingenieros"
-    class="brand-logo"
-  >
+    <button class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-  <span class="brand-caption">
-    TECNOLOGÍA Y ELECTRICIDAD
-  </span>
-
-</a>
-
-
-<button
-  class="menu-toggle"
-  id="menuToggle"
->
-
-  <span></span>
-  <span></span>
-  <span></span>
-
-</button>
-
-
-<nav
-  class="main-nav"
-  id="mainNav"
->
-
-  <a href="index.html">
-    Inicio
-  </a>
-
-  <a href="index.html#servicios">
-    Servicios
-  </a>
-
-  <a href="index.html#proyectos">
-    Proyectos
-  </a>
-
-  <a href="index.html#nosotros">
-    Nosotros
-  </a>
-
-  <a
-    href="index.html#contacto"
-    class="nav-button"
-  >
-    Cotizar proyecto
-  </a>
-
-</nav>
-
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="index.html#contacto" class="nav-button">Cotizar proyecto</a>
+    </nav>
   </div>
-
 </header>
 
 <main>
@@ -122,943 +39,492 @@ content="width=device-width, initial-scale=1.0"
 <!-- =====================================================
      HERO PROYECTO
 ===================================================== -->
-
 <section class="project-detail-hero">
-
   <div class="container">
-
-<a
-  href="javascript:history.back()"
-  class="back-link"
->
-  ← Volver
-</a>
-
-
-<div class="project-detail-layout">
-
-
-  <div class="project-detail-copy">
-
-
-    <span
-      class="section-kicker"
-      id="projectCategory"
-    >
-      ELÉCTRICO
-    </span>
-
-
-    <span
-      class="project-big-number"
-      id="projectNumber"
-    >
-      01
-    </span>
-
-
-    <h1 id="projectTitle">
-      Proyecto
-    </h1>
-
-
-    <p id="projectIntro">
-    </p>
-
-
-    <a
-      href="https://wa.me/51987270326"
-      target="_blank"
-      class="btn btn-primary"
-      id="projectWhatsApp"
-    >
-      Consultar proyecto →
+    <a href="javascript:history.back()" class="btn-back">
+      <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+      Volver
     </a>
 
+    <div class="project-detail-layout">
+      <div class="project-detail-copy">
+        <span class="section-kicker" id="projectCategory">ELÉCTRICO</span>
+        <span class="project-big-number" id="projectNumber">01</span>
+        <h1 id="projectTitle">Proyecto</h1>
+        <p id="projectIntro"></p>
 
+        <a href="https://wa.me/51987270326" target="_blank" class="btn btn-primary" id="projectWhatsApp">
+          Consultar proyecto →
+        </a>
+      </div>
+
+      <div class="project-feature-image">
+        <img id="projectMainImage" src="assets/electrico/luz-emerg2.jpeg" alt="Proyecto INNOVAX">
+      </div>
+    </div>
   </div>
-
-
-  <div class="project-feature-image">
-
-    <img
-      id="projectMainImage"
-      src="assets/electrico/luz-emerg2.jpeg"
-      alt="Proyecto INNOVAX"
-    >
-
-  </div>
-
-
-</div>
-
-  </div>
-
 </section>
 
 <!-- =====================================================
      INFORMACIÓN
 ===================================================== -->
-
 <section class="section project-information">
-
   <div class="container project-info-grid">
+    <div>
+      <span class="section-kicker">SOBRE EL PROYECTO</span>
+      <h2>Descripción del trabajo</h2>
+      <p id="projectDescription"></p>
+    </div>
 
-<div>
+    <aside class="project-data-box">
+      <span>ÁREA</span>
+      <strong id="projectArea">Eléctrico</strong>
 
+      <span>PROYECTO</span>
+      <strong id="projectNameSmall">Proyecto</strong>
 
-  <span class="section-kicker">
-    SOBRE EL PROYECTO
-  </span>
-
-
-  <h2>
-    Descripción del trabajo
-  </h2>
-
-
-  <p id="projectDescription">
-  </p>
-
-
-</div>
-
-
-<aside class="project-data-box">
-
-
-  <span>
-    ÁREA
-  </span>
-
-
-  <strong id="projectArea">
-    Eléctrico
-  </strong>
-
-
-  <span>
-    PROYECTO
-  </span>
-
-
-  <strong id="projectNameSmall">
-    Proyecto
-  </strong>
-
-
-  <span>
-    FOTOGRAFÍAS
-  </span>
-
-
-  <strong id="projectPhotoTotal">
-    0
-  </strong>
-
-
-</aside>
-
+      <span>FOTOGRAFÍAS</span>
+      <strong id="projectPhotoTotal">0</strong>
+    </aside>
   </div>
-
 </section>
 
 <!-- =====================================================
      TRABAJOS REALIZADOS
 ===================================================== -->
-
 <section class="section work-section">
-
   <div class="container">
+    <div class="section-heading">
+      <div>
+        <span class="section-kicker">ALCANCE</span>
+        <h2>Trabajos realizados</h2>
+      </div>
+      <p>Principales actividades desarrolladas dentro del proyecto.</p>
+    </div>
 
-<div class="section-heading">
-
-  <div>
-
-    <span class="section-kicker">
-      ALCANCE
-    </span>
-
-
-    <h2>
-      Trabajos realizados
-    </h2>
-
+    <div class="work-list" id="projectWork"></div>
   </div>
-
-
-  <p>
-    Principales actividades desarrolladas
-    dentro del proyecto.
-  </p>
-
-</div>
-
-
-<div
-  class="work-list"
-  id="projectWork"
-></div>
-
-  </div>
-
 </section>
 
 <!-- =====================================================
      GALERÍA
 ===================================================== -->
-
 <section class="section project-gallery-section">
-
   <div class="container">
+    <div class="section-heading">
+      <div>
+        <span class="section-kicker">GALERÍA</span>
+        <h2>Así se desarrolló el proyecto</h2>
+      </div>
+    </div>
 
-<div class="section-heading">
-
-  <div>
-
-    <span class="section-kicker">
-      GALERÍA
-    </span>
-
-
-    <h2>
-      Así se desarrolló el proyecto
-    </h2>
-
+    <div class="project-gallery" id="projectGallery"></div>
   </div>
-
-
-  <p>
-    Haz clic en cualquier imagen
-    para verla en pantalla completa.
-  </p>
-
-</div>
-
-
-<div
-  class="project-gallery"
-  id="projectGallery"
-></div>
-
-  </div>
-
 </section>
 
 <!-- =====================================================
      CTA
 ===================================================== -->
-
 <section class="detail-cta">
-
   <div class="container detail-cta-inner">
+    <div>
+      <span class="section-kicker detail-cta-kicker">¿NECESITAS ALGO SIMILAR?</span>
+      <h2>Podemos desarrollar tu proyecto.</h2>
+      <p>Cuéntanos qué necesitas y evaluamos tu proyecto.</p>
+    </div>
 
-<div>
-
-  <span class="section-kicker detail-cta-kicker">
-    ¿NECESITAS ALGO SIMILAR?
-  </span>
-
-
-  <h2>
-    Podemos desarrollar tu proyecto.
-  </h2>
-
-
-  <p>
-    Cuéntanos qué necesitas y
-    evaluamos tu proyecto.
-  </p>
-
-</div>
-
-
-<a
-  href="https://wa.me/51987270326"
-  target="_blank"
-  class="btn"
-  id="bottomWhatsApp"
->
-  Hablar por WhatsApp →
-</a>
-
+    <a href="https://wa.me/51987270326" target="_blank" class="btn" id="bottomWhatsApp">
+      Hablar por WhatsApp →
+    </a>
   </div>
-
 </section>
 
 </main>
 
+<!-- =====================================================
+     FOOTER EMPRESARIAL (PÁGINAS SECUNDARIAS)
+===================================================== -->
 <footer class="site-footer">
-
   <div class="container footer-inner">
+    
+    <div class="footer-col footer-brand-col">
+      <img src="assets/img/logoblanco.png" alt="INNOVAX Ingenieros" class="footer-logo">
+      <p class="footer-desc">
+        Soluciones integrales en ingeniería eléctrica, infraestructura de redes y servicios generales para el sector industrial, comercial y corporativo.
+      </p>
+      <span class="footer-badge">Ingeniería & Tecnología</span>
+    </div>
 
-<div>
+    <div class="footer-col">
+      <h4 class="footer-title">Navegación</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#servicios">Especialidades</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="index.html#contacto">Cotizar Proyecto</a></li>
+      </ul>
+    </div>
 
-  <img
-    src="assets/img/logoblanco.png"
-    alt="INNOVAX"
-    class="footer-logo"
-  >
+    <div class="footer-col">
+      <h4 class="footer-title">Especialidades</h4>
+      <ul class="footer-links">
+        <li><a href="servicio.html?tipo=electrico">Sistemas Eléctricos</a></li>
+        <li><a href="servicio.html?tipo=redes">Redes & Conectividad</a></li>
+        <li><a href="servicio.html?tipo=generales">Servicios Generales</a></li>
+        <li><a href="servicio.html?tipo=redes">Cableado Estructurado</a></li>
+      </ul>
+    </div>
 
-  <p>
-    Tecnología y electricidad.
-  </p>
-
-</div>
-
-
-<div class="footer-nav">
-
-  <a href="index.html#servicios">
-    Servicios
-  </a>
-
-  <a href="index.html#proyectos">
-    Proyectos
-  </a>
-
-  <a href="index.html#nosotros">
-    Nosotros
-  </a>
-
-  <a href="index.html#contacto">
-    Contacto
-  </a>
-
-</div>
-
-
-<p class="copyright">
-
-  © <span id="year"></span>
-  INNOVAX Ingenieros.
-
-</p>
+    <div class="footer-col">
+      <h4 class="footer-title">Ubicación & Contacto</h4>
+      <ul class="footer-contact-list">
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>Coop. Lanificio J-8, J.L. Bustamante y Rivero, Arequipa - Perú</span>
+        </li>
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+51 987 270 326 / +51 958 876 858</span>
+        </li>
+      </ul>
+    </div>
 
   </div>
 
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p class="copyright">
+        © <span id="year"></span> <strong>INNOVAX Ingenieros S.A.C.</strong> Todos los derechos reservados.
+      </p>
+    </div>
+  </div>
 </footer>
 
 <!-- =====================================================
      LIGHTBOX
 ===================================================== -->
-
-<div
-  class="image-lightbox"
-  id="lightbox"
->
-
-<button
-id="lightboxClose"
-aria-label="Cerrar imagen"
-
->
-×
-  </button>
-
-<img
-id="lightboxImage"
-src=""
-alt=""
-
->
-
+<div class="image-lightbox" id="lightbox">
+  <button id="lightboxClose" aria-label="Cerrar imagen">×</button>
+  <img id="lightboxImage" src="" alt="">
 </div>
 
 <script>
-
-document.addEventListener(
-  'DOMContentLoaded',
-  function(){
-
+document.addEventListener('DOMContentLoaded', function(){
 
     /* ==================================================
        BASE DE PROYECTOS
     ================================================== */
-
     const projects = {
 
-
       'luz-emergencia': {
-
-        number:
-          '01',
-
-        area:
-          'Eléctrico',
-
-        category:
-          'ILUMINACIÓN Y SEGURIDAD',
-
-        title:
-          'Instalación de luces de emergencia',
-
-        intro:
-          'Implementación de soluciones de iluminación de emergencia para mejorar la seguridad y visibilidad de los espacios.',
-
-        description:
-          'El proyecto contempló la instalación y adecuación de equipos de iluminación de emergencia, buscando una distribución adecuada y un funcionamiento confiable ante una eventual interrupción del suministro eléctrico.',
-
+        number: '01',
+        area: 'Eléctrico',
+        category: 'ILUMINACIÓN Y SEGURIDAD',
+        title: 'Instalación de luces de emergencia',
+        intro: 'Implementación de soluciones de iluminación de emergencia para mejorar la seguridad y visibilidad de los espacios.',
+        description: 'El proyecto contempló la instalación y adecuación de equipos de iluminación de emergencia, buscando una distribución adecuada y un funcionamiento confiable ante una eventual interrupción del suministro eléctrico.',
         work: [
-
           'Evaluación de los espacios',
-
           'Definición de puntos de instalación',
-
           'Instalación de equipos de emergencia',
-
           'Adecuación y organización del cableado',
-
           'Verificación del funcionamiento',
-
           'Revisión final de la instalación'
-
         ],
-
-        mainImage:
-          'assets/electrico/luz-emerg2.jpeg',
-
+        mainImage: 'assets/electrico/luz-emerg2.jpeg',
         photos: [
-
           'assets/electrico/luz-emerg1.jpeg',
-
           'assets/electrico/luz-emerg2.jpeg',
-
           'assets/electrico/luz-emerg3.jpeg',
-
           'assets/electrico/luz-emerg4.jpeg',
-
           'assets/electrico/luz-emerg5.jpeg'
-
         ]
-
       },
-
 
       'pozo-tierra': {
-
-        number:
-          '02',
-
-        area:
-          'Eléctrico',
-
-        category:
-          'PROTECCIÓN ELÉCTRICA',
-
-        title:
-          'Sistema de puesta a tierra',
-
-        intro:
-          'Implementación de un sistema de puesta a tierra orientado a mejorar la protección de la instalación eléctrica.',
-
-        description:
-          'El proyecto comprendió los trabajos necesarios para la implementación del sistema de puesta a tierra, considerando la preparación del espacio, instalación de componentes y verificación del trabajo realizado.',
-
+        number: '02',
+        area: 'Eléctrico',
+        category: 'PROTECCIÓN ELÉCTRICA',
+        title: 'Sistema de puesta a tierra',
+        intro: 'Implementación de un sistema de puesta a tierra orientado a mejorar la protección de la instalación eléctrica.',
+        description: 'El proyecto comprendió los trabajos necesarios para la implementación del sistema de puesta a tierra, considerando la preparación del espacio, instalación de componentes y verificación del trabajo realizado.',
         work: [
-
           'Evaluación del espacio',
-
           'Preparación del área de trabajo',
-
           'Implementación del sistema',
-
           'Instalación de componentes',
-
           'Organización de conexiones',
-
           'Verificación de la instalación'
-
         ],
-
-        mainImage:
-          'assets/electrico/pozo1.jpeg',
-
+        mainImage: 'assets/electrico/pozo1.jpeg',
         photos: [
-
           'assets/electrico/pozo1.jpeg',
-
           'assets/electrico/pozo2.jpeg',
-
           'assets/electrico/pozo3.jpeg',
-
           'assets/electrico/pozo4.jpeg',
-
           'assets/electrico/pozo5.jpeg'
-
         ]
-
       },
 
-
-      'redes': {
-
-        number:
-          '01',
-
-        area:
-          'Redes',
-
-        category:
-          'CABLEADO ESTRUCTURADO',
-
-        title:
-          'Implementación de infraestructura de red',
-
-        intro:
-          'Implementación y organización de infraestructura de comunicaciones para mantener una red ordenada y funcional.',
-
-        description:
-          'El proyecto comprendió trabajos de instalación y organización de infraestructura de comunicaciones, buscando una distribución ordenada y una solución preparada para las necesidades del espacio.',
-
+      'acometida-bombas': {
+        number: '03',
+        area: 'Eléctrico',
+        category: 'PROTECCIÓN ELÉCTRICA',
+        title: 'Acometida en cuarto de bombas',
+        intro: 'Servicio técnico especializado en el diseño, canalización y conexión de la acometida eléctrica para sistemas de bombeo (agua potable, presurización o contra incendios).',
+        description: 'Ejecución integral del diseño, canalización y conexión de la acometida eléctrica de fuerza para el cuarto de bombas, orientada a garantizar un suministro continuo, seguro y dimensionado a la carga operativa de las electrobombas y sus tableros de control. El alcance contempla el tendido de conductores aptos para humedad, la instalación de protecciones termomagnéticas y diferenciales, la integración al sistema de puesta a tierra y la realización de pruebas de aislamiento y arranque bajo norma (CNE), asegurando una infraestructura confiable y la protección total del equipamiento.',
         work: [
-
-          'Revisión del espacio',
-
-          'Definición de puntos de red',
-
-          'Tendido de cableado',
-
-          'Organización de infraestructura',
-
-          'Ordenamiento de conexiones',
-
+          'Evaluación del espacio',
+          'Preparación del área de trabajo',
+          'Implementación del sistema',
+          'Instalación de componentes',
+          'Organización de conexiones',
           'Verificación de la instalación'
-
         ],
-
-        mainImage:
-          'assets/red/red4.jpeg',
-
+        mainImage: 'assets/servgen/aco4.jpeg',
         photos: [
-
-          'assets/red/red1.jpeg',
-
-          'assets/red/red2.jpeg',
-
-          'assets/red/red3.jpeg',
-
-          'assets/red/red4.jpeg'
-
+          'assets/servgen/aco2.jpeg',
+          'assets/servgen/aco3.jpeg',
+          'assets/servgen/aco4.jpeg',
+          'assets/servgen/aco5.jpeg',
+          'assets/servgen/aco6.jpeg',
+          'assets/servgen/aco7.jpeg'
         ]
-
       },
 
-
-      'mantenimiento-general': {
-
-        number:
-          '01',
-
-        area:
-          'Servicios Generales',
-
-        category:
-          'MANTENIMIENTO Y ADECUACIONES',
-
-        title:
-          'Mantenimiento y trabajos complementarios',
-
-        intro:
-          'Trabajos de mantenimiento y adecuación desarrollados como parte de las soluciones complementarias de INNOVAX.',
-
-        description:
-          'Realizamos trabajos complementarios orientados a mantener las instalaciones en buenas condiciones de funcionamiento y atender necesidades específicas identificadas durante el proyecto.',
-
+      'camaras': {
+        number: '01',
+        area: 'Redes',
+        category: 'CÁMARAS',
+        title: 'Instalación de Cámaras de Seguridad',
+        intro: 'Servicio técnico integral de instalación y puesta en marcha de sistemas de cámaras de seguridad.',
+        description: 'El proyecto comprendió el montado de equipos, tendido de cableado, canalización y configuración del sistema de grabación y monitoreo para garantizar la cobertura estratégica de las instalaciones.',
         work: [
-
-          'Evaluación de necesidades',
-
-          'Revisión de instalaciones',
-
-          'Trabajos de mantenimiento',
-
-          'Adecuaciones',
-
-          'Correcciones',
-
-          'Verificación final'
-
+          'Revisión del espacio y puntos ciegos',
+          'Definición de ubicación de cámaras',
+          'Tendido de cableado estructurado',
+          'Montaje y fijación de cámaras',
+          'Configuración de NVR y monitoreo',
+          'Pruebas y verificación de visualización'
         ],
-
-        mainImage:
-          'assets/electrico/luz-emerg4.jpeg',
-
+        mainImage: 'assets/red/cam1.jpeg',
         photos: [
-
-          'assets/electrico/luz-emerg4.jpeg',
-
-          'assets/electrico/luz-emerg1.jpeg',
-
-          'assets/red/red3.jpeg'
-
+          'assets/red/cam1.jpeg',
+          'assets/red/cam2.jpeg',
+          'assets/red/cam3.jpeg',
+          'assets/red/cam4.jpeg',
+          'assets/red/cam5.jpeg',
+          'assets/red/cam6.jpeg',
+          'assets/red/cam7.jpeg',
+          'assets/red/cam8.jpeg',
+          'assets/red/cam9.jpeg'
         ]
+      },
 
+      'fibra-optica': {
+        number: '02',
+        area: 'Redes',
+        category: 'FIBRA',
+        title: 'Instalación de Fibra Óptica',
+        intro: 'Implementación y organización de infraestructura de comunicaciones por fibra óptica.',
+        description: 'El proyecto comprendió trabajos de canalización, fusión e instalación de fibra óptica, buscando una velocidad óptima, distribución ordenada y alta disponibilidad de red.',
+        work: [
+          'Revisión del trazado',
+          'Canalización e hilo guía',
+          'Tendido de fibra óptica',
+          'Empalmes y fusiones',
+          'Organización en bandeja/ODF',
+          'Pruebas de potencia y conectividad'
+        ],
+        mainImage: 'assets/red/fibra1.jpeg',
+        photos: [
+          'assets/red/fibra1.jpeg',
+          'assets/red/fibra2.jpeg',
+          'assets/red/fibra3.jpeg',
+          'assets/red/fibra4.jpeg',
+          'assets/red/fibra5.jpeg',
+          'assets/red/fibra6.jpeg',
+          'assets/red/fibra7.jpeg'
+        ]
+      },
+
+      'mapa-calor': {
+        number: '03',
+        area: 'Redes',
+        category: 'MAPAS DE COBERTURA',
+        title: 'Generación de Mapas de Calor Wi-Fi',
+        intro: 'Análisis y simulación de la cobertura de red inalámbrica para garantizar una óptima distribución de la señal.',
+        description: 'El proyecto comprendió el levantamiento en sitio y modelamiento técnico para identificar zonas de sombra, interferencias y niveles de intensidad de señal (RSSI), optimizando la ubicación estratégica de Puntos de Acceso (AP).',
+        work: [
+          'Levantamiento de planos e inspección técnica',
+          'Medición de cobertura y niveles de interferencia',
+          'Simulación y modelamiento del mapa de calor Wi-Fi',
+          'Identificación y corrección de zonas sin cobertura',
+          'Reorganización y reubicación estratégica de equipos AP',
+          'Generación de informe técnico final'
+        ],
+        mainImage: 'assets/red/mapa1.png',
+        photos: [
+          'assets/red/mapa1.png',
+          'assets/red/mapa2.png',
+          'assets/red/mapa3.png',
+          'assets/red/mapa4.png',
+          'assets/red/mapa5.png',
+          'assets/red/mapa6.png'
+        ]
+      },
+
+      'pintado-des': {
+        number: '01',
+        area: 'Servicios Generales',
+        category: 'MANTENIMIENTO Y ADECUACIONES',
+        title: 'Pintado de Desniveles',
+        intro: 'Trabajos de mantenimiento y adecuación desarrollados como parte de las soluciones complementarias de INNOVAX.',
+        description: 'Realizamos trabajos complementarios orientados a mantener las instalaciones en buenas condiciones de funcionamiento y atender necesidades específicas identificadas durante el proyecto.',
+        work: [
+          'Evaluación de necesidades',
+          'Revisión de instalaciones',
+          'Trabajos de mantenimiento',
+          'Adecuaciones',
+          'Correcciones',
+          'Verificación final'
+        ],
+        mainImage: 'assets/servgen/des3.jpg',
+        photos: [
+          'assets/servgen/des1.jpg',
+          'assets/servgen/des2.jpg',
+          'assets/servgen/des3.jpg',
+          'assets/servgen/des4.jpg',
+          'assets/servgen/des5.jpg',
+          'assets/servgen/des6.jpg',
+          'assets/servgen/des7.jpg',
+          'assets/servgen/des8.jpg',
+          'assets/servgen/des9.jpg',
+          'assets/servgen/des10.jpg',
+          'assets/servgen/des11.jpg',
+          'assets/servgen/des12.jpg',
+          'assets/servgen/des13.jpg',
+          'assets/servgen/des14.jpg',
+          'assets/servgen/des15.jpg',
+          'assets/servgen/des16.jpg',
+          'assets/servgen/des17.jpg',
+          'assets/servgen/des18.jpg',
+          'assets/servgen/des19.jpg'
+        ]
       }
 
     };
 
-
-
     /* ==================================================
        OBTENER PROYECTO
     ================================================== */
-
-    const params =
-      new URLSearchParams(
-        window.location.search
-      );
-
-
-    const key =
-      params.get('proyecto') ||
-      'luz-emergencia';
-
-
-    const project =
-      projects[key] ||
-      projects['luz-emergencia'];
-
-
+    const params = new URLSearchParams(window.location.search);
+    const key = params.get('proyecto') || 'luz-emergencia';
+    const project = projects[key] || projects['luz-emergencia'];
 
     /* ==================================================
        DATOS
     ================================================== */
+    document.title = project.title + ' | INNOVAX Ingenieros';
 
-    document.title =
-      project.title +
-      ' | INNOVAX Ingenieros';
-
-
-    document.getElementById(
-      'projectCategory'
-    ).textContent =
-      project.category;
-
-
-    document.getElementById(
-      'projectNumber'
-    ).textContent =
-      project.number;
-
-
-    document.getElementById(
-      'projectTitle'
-    ).textContent =
-      project.title;
-
-
-    document.getElementById(
-      'projectIntro'
-    ).textContent =
-      project.intro;
-
-
-    document.getElementById(
-      'projectDescription'
-    ).textContent =
-      project.description;
-
-
-    document.getElementById(
-      'projectArea'
-    ).textContent =
-      project.area;
-
-
-    document.getElementById(
-      'projectNameSmall'
-    ).textContent =
-      project.title;
-
-
-    document.getElementById(
-      'projectPhotoTotal'
-    ).textContent =
-      project.photos.length;
-
-
-    document.getElementById(
-      'projectMainImage'
-    ).src =
-      project.mainImage;
-
-
+    document.getElementById('projectCategory').textContent = project.category;
+    document.getElementById('projectNumber').textContent = project.number;
+    document.getElementById('projectTitle').textContent = project.title;
+    document.getElementById('projectIntro').textContent = project.intro;
+    document.getElementById('projectDescription').textContent = project.description;
+    document.getElementById('projectArea').textContent = project.area;
+    document.getElementById('projectNameSmall').textContent = project.title;
+    document.getElementById('projectPhotoTotal').textContent = project.photos.length;
+    document.getElementById('projectMainImage').src = project.mainImage;
 
     /* ==================================================
        TRABAJOS
     ================================================== */
-
-    const work =
-      document.getElementById(
-        'projectWork'
-      );
-
-
-    project.work.forEach(
-      function(item,index){
-
-        const article =
-          document.createElement(
-            'div'
-          );
-
-
-        article.className =
-          'work-item';
-
-
-        article.innerHTML = `
-
-          <span>
-            ${String(index + 1).padStart(2,'0')}
-          </span>
-
-          <strong>
-            ${item}
-          </strong>
-
-          <b>
-            ✓
-          </b>
-
-        `;
-
-
-        work.appendChild(
-          article
-        );
-
-      }
-    );
-
-
+    const work = document.getElementById('projectWork');
+    project.work.forEach(function(item, index){
+      const article = document.createElement('div');
+      article.className = 'work-item';
+      article.innerHTML = `
+        <span>${String(index + 1).padStart(2,'0')}</span>
+        <strong>${item}</strong>
+        <b>✓</b>
+      `;
+      work.appendChild(article);
+    });
 
     /* ==================================================
        GALERÍA
     ================================================== */
+    const gallery = document.getElementById('projectGallery');
+    project.photos.forEach(function(photo, index){
+      const figure = document.createElement('figure');
+      figure.className = 'project-gallery-item';
+      figure.innerHTML = `
+        <img src="${photo}" alt="${project.title} - fotografía ${index + 1}">
+        <span>${String(index + 1).padStart(2,'0')}</span>
+      `;
+      gallery.appendChild(figure);
 
-    const gallery =
-      document.getElementById(
-        'projectGallery'
-      );
-
-
-    project.photos.forEach(
-      function(photo,index){
-
-        const figure =
-          document.createElement(
-            'figure'
-          );
-
-
-        figure.className =
-          'project-gallery-item';
-
-
-        figure.innerHTML = `
-
-          <img
-            src="${photo}"
-            alt="${project.title} - fotografía ${index + 1}"
-          >
-
-          <span>
-            ${String(index + 1).padStart(2,'0')}
-          </span>
-
-        `;
-
-
-        gallery.appendChild(
-          figure
-        );
-
-
-        figure.addEventListener(
-          'click',
-          function(){
-
-            document.getElementById(
-              'lightboxImage'
-            ).src =
-              photo;
-
-
-            document.getElementById(
-              'lightbox'
-            ).classList.add(
-              'active'
-            );
-
-          }
-        );
-
-      }
-    );
-
-
+      figure.addEventListener('click', function(){
+        document.getElementById('lightboxImage').src = photo;
+        document.getElementById('lightbox').classList.add('active');
+      });
+    });
 
     /* ==================================================
        LIGHTBOX
     ================================================== */
+    const lightbox = document.getElementById('lightbox');
 
-    const lightbox =
-      document.getElementById(
-        'lightbox'
-      );
+    document.getElementById('lightboxClose').addEventListener('click', function(){
+      lightbox.classList.remove('active');
+    });
 
-
-    document.getElementById(
-      'lightboxClose'
-    ).addEventListener(
-      'click',
-      function(){
-
-        lightbox.classList.remove(
-          'active'
-        );
-
+    lightbox.addEventListener('click', function(event){
+      if(event.target === lightbox){
+        lightbox.classList.remove('active');
       }
-    );
+    });
 
-
-    lightbox.addEventListener(
-      'click',
-      function(event){
-
-        if(
-          event.target ===
-          lightbox
-        ){
-
-          lightbox.classList.remove(
-            'active'
-          );
-
-        }
-
+    document.addEventListener('keydown', function(event){
+      if(event.key === 'Escape'){
+        lightbox.classList.remove('active');
       }
-    );
-
-
-    document.addEventListener(
-      'keydown',
-      function(event){
-
-        if(
-          event.key === 'Escape'
-        ){
-
-          lightbox.classList.remove(
-            'active'
-          );
-
-        }
-
-      }
-    );
-
-
+    });
 
     /* ==================================================
        WHATSAPP
     ================================================== */
+    const message = 'Hola INNOVAX, me interesa un proyecto similar a: ' + project.title;
+    const whatsapp = 'https://wa.me/51987270326?text=' + encodeURIComponent(message);
 
-    const message =
-      'Hola INNOVAX, me interesa un proyecto similar a: ' +
-      project.title;
-
-
-    const whatsapp =
-      'https://wa.me/51987270326?text=' +
-      encodeURIComponent(
-        message
-      );
-
-
-    document.getElementById(
-      'projectWhatsApp'
-    ).href =
-      whatsapp;
-
-
-    document.getElementById(
-      'bottomWhatsApp'
-    ).href =
-      whatsapp;
-
-
+    document.getElementById('projectWhatsApp').href = whatsapp;
+    document.getElementById('bottomWhatsApp').href = whatsapp;
 
     /* ==================================================
        AÑO
     ================================================== */
-
-    document.getElementById(
-      'year'
-    ).textContent =
-      new Date().getFullYear();
-
-
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     /* ==================================================
        HEADER
     ================================================== */
-
-    const header =
-      document.getElementById(
-        'header'
-      );
-
-
-    window.addEventListener(
-      'scroll',
-      function(){
-
-        header.classList.toggle(
-          'scrolled',
-          window.scrollY > 30
-        );
-
-      }
-    );
-
-
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', function(){
+      header.classList.toggle('scrolled', window.scrollY > 30);
+    });
 
     /* ==================================================
        MENÚ
     ================================================== */
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mainNav');
+    toggle.addEventListener('click', function(){
+      nav.classList.toggle('open');
+    });
 
-    const toggle =
-      document.getElementById(
-        'menuToggle'
-      );
-
-
-    const nav =
-      document.getElementById(
-        'mainNav'
-      );
-
-
-    toggle.addEventListener(
-      'click',
-      function(){
-
-        nav.classList.toggle(
-          'open'
-        );
-
-      }
-    );
-
-
-  }
-);
-
+});
 </script>
 
 </body>
-
 </html>

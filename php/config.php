@@ -1,18 +1,16 @@
 <?php
 /**
- * Configuración del formulario de contacto — VOLTEC
- * Edita solo las siguientes constantes según tu correo y dominio.
+ * Configuración del formulario de contacto — INNOVAX Ingenieros
  */
 
-// Correo donde llegarán las solicitudes (puede ser tu Gmail)
+// Correo de destino donde llegarán los mensajes del formulario
 define('DESTINO_EMAIL', 'innovaxingenieros.ventas@gmail.com');
 
-// Nombre que aparecerá como destinatario interno
-define('DESTINO_NOMBRE', 'VOLTEC Redes & Electricidad');
+// Nombre comercial del destinatario
+define('DESTINO_NOMBRE', 'INNOVAX Ingenieros');
 
-// Dominio autorizado a enviar este formulario (para el remitente "From")
-// Debe coincidir con el dominio donde subas el sitio, ej: "voltec.pe"
-define('DOMINIO_SITIO', 'tudominio.com');
+// Dominio donde está alojada la web (usado para la cabecera "From")
+define('DOMINIO_SITIO', 'innovaxingenieros.com.pe');
 
-// Asunto base del correo
-define('ASUNTO_BASE', 'Nueva solicitud de cotización — Sitio Web');
+// Asunto base para los correos recibidos
+define('ASUNTO_BASE', 'Nueva cotización desde el sitio web');
