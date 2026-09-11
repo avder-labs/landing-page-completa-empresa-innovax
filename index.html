@@ -7,7 +7,7 @@
   <title>INNOVAX Ingenieros | Tecnología y Electricidad</title>
   <meta name="description" content="INNOVAX Ingenieros. Soluciones eléctricas, redes y servicios generales para proyectos.">
 
-  <link rel="icon" href="assets/img/logo.png" type="image/png">
+  <link rel="icon" href="assets/img/icono.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
 <header class="site-header" id="header">
   <div class="container header-inner">
     <a class="brand" href="index.html">
-      <img src="assets/img/logo.png" alt="INNOVAX Ingenieros" class="brand-logo">
+      <img src="assets/img/logo.png" alt="INNOVAX Ingenieros" class="brand-logo" onerror="this.style.display='none';">
       <span class="brand-caption">TECNOLOGÍA Y ELECTRICIDAD</span>
     </a>
 
@@ -35,6 +35,7 @@
     <nav class="main-nav" id="mainNav">
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
+      <a href="#certificaciones">Certificaciones y Homologaciones</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#contacto" class="nav-button">Cotizar proyecto</a>
     </nav>
@@ -49,14 +50,14 @@
 <section class="hero">
   <div class="hero-slider">
     <div class="slide active" style="background-image:url('assets/img/hero-redes.jpg')"></div>
-    <div class="slide" style="background-image:url('assets/img/hero-bg-1.jpg')"></div>
+    <!--<div class="slide" style="background-image:url('assets/img/.jpg')"></div>-->
   </div>
 
   <div class="hero-overlay"></div>
   <div class="hero-pattern"></div>
 
   <div class="container hero-content">
-    <div class="hero-copy">
+    <div class="hero-copy reveal-fade-up">
       <div class="eyebrow">
         <i></i> INGENIERÍA · TECNOLOGÍA · SERVICIOS
       </div>
@@ -82,11 +83,11 @@
 ===================================================== -->
 <section class="section intro">
   <div class="container intro-grid">
-    <div>
+    <div class="reveal-slide-right">
       <span class="section-kicker">INNOVAX INGENIEROS</span>
       <h2>Tres especialidades. <br>Una solución integral.</h2>
     </div>
-    <p>Organizamos nuestros servicios en tres grandes áreas para que puedas conocer fácilmente qué hacemos y descubrir proyectos reales realizados por nuestro equipo.</p>
+    <p class="reveal-slide-left">Organizamos nuestros servicios en tres grandes áreas para que puedas conocer fácilmente qué hacemos y descubrir proyectos reales realizados por nuestro equipo.</p>
   </div>
 </section>
 
@@ -95,7 +96,7 @@
 ===================================================== -->
 <section class="section services-section" id="servicios">
   <div class="container">
-    <div class="section-heading">
+    <div class="section-heading reveal-fade-up">
       <div>
         <span class="section-kicker">NUESTROS SERVICIOS</span>
         <h2>Explora nuestras especialidades</h2>
@@ -105,14 +106,14 @@
     <div class="services-main-grid">
 
       <!-- ELÉCTRICO -->
-      <a href="servicio.html?tipo=electrico" class="service-feature-card">
+      <a href="servicio.html?tipo=electrico" class="service-feature-card reveal-card" data-delay="100">
         <div class="service-feature-image">
-          <img src="assets/electrico/luz-emerg2.jpeg" alt="Servicios eléctricos">
+          <img src="assets/electrico/luz-emerg2.jpeg" alt="Servicios eléctricos" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
           <span class="image-number">01</span>
         </div>
         <div class="service-feature-content">
           <span class="service-small-label">ESPECIALIDAD</span>
-          <h3>Eléctrico</h3>
+          <h3>Electricidad</h3>
           <p>Instalaciones eléctricas, iluminación, tableros, puesta a tierra y soluciones para diferentes tipos de proyectos.</p>
           <div class="service-tags">
             <span>Instalaciones</span>
@@ -126,9 +127,9 @@
       </a>
 
       <!-- REDES -->
-      <a href="servicio.html?tipo=redes" class="service-feature-card">
+      <a href="servicio.html?tipo=redes" class="service-feature-card reveal-card" data-delay="250">
         <div class="service-feature-image">
-          <img src="assets/red/red4.jpeg" alt="Servicios de redes">
+          <img src="assets/red/red4.jpeg" alt="Servicios de redes" onerror="this.onerror=null; this.src='assets/img/hero-redes.jpg';">
           <span class="image-number">02</span>
         </div>
         <div class="service-feature-content">
@@ -147,9 +148,9 @@
       </a>
 
       <!-- SERVICIOS GENERALES -->
-      <a href="servicio.html?tipo=generales" class="service-feature-card">
+      <a href="servicio.html?tipo=generales" class="service-feature-card reveal-card" data-delay="400">
         <div class="service-feature-image">
-          <img src="assets/servgen/gen1.jpeg" alt="Servicios generales">
+          <img src="assets/servgen/gen1.jpeg" alt="Servicios generales" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
           <span class="image-number">03</span>
         </div>
         <div class="service-feature-content">
@@ -172,11 +173,118 @@
 </section>
 
 <!-- =====================================================
+     SECCIÓN CERTIFICACIONES (CON VIDEO DE FONDO Y MEDALLAS)
+===================================================== -->
+<section class="section certs-showcase-v2" id="certificaciones">
+  <video class="cert-bg-video" autoplay loop muted playsinline>
+    <source src="assets/video/videof.mp4" type="video/mp4">
+  </video>
+  <div class="cert-bg-overlay"></div>
+
+  <div class="container certs-content-wrapper">
+    
+    <div class="section-heading centered reveal-zoom-in">
+      <span class="cert-badge-kicker">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        GARANTÍA Y RESPALDO TÉCNICO
+      </span>
+      <h2>Certificaciones y Homologaciones</h2>
+      <p>Acreditaciones oficiales e inspecciones que certifican nuestra calidad, cumplimiento normativo y seguridad industrial.</p>
+    </div>
+
+    <div class="certs-grid-v2">
+
+      <!-- Tarjeta 1 -->
+      <div class="cert-card-v2 reveal-card" data-delay="100" onclick="openCertModal('assets/img/cert1.jpg', 'Certificado de Homologación MEGA', 'Solicitado por Mall Aventura S.A. | Calificación: Muy Bueno (95.85 ptos.)', 'Evaluación integral en operación, seguridad y salud en el trabajo, aspectos financieros y productivos.')">
+        <div class="cert-ribbon"><span>ACREDITADO</span></div>
+        <div class="cert-preview-box">
+          <div class="cert-badge-floating" title="Certificación Oficial Verificada">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          </div>
+          <img src="assets/img/cert1.jpg" alt="Certificado de Homologación MEGA" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80';">
+          <div class="cert-zoom-tag">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
+            <span>Ver documento</span>
+          </div>
+        </div>
+        <div class="cert-body-v2">
+          <div class="cert-tags-v2">
+            <span class="tag-red">MEGA / MALL AVENTURA</span>
+            <span class="tag-gray">HOMOLOGACIÓN</span>
+          </div>
+          <h3>Certificado de Homologación MEGA</h3>
+          <p>Calificación 'Muy Bueno' con 95.85 puntos obtenida en la evaluación requerida por Mall Aventura S.A.</p>
+          <div class="cert-footer-v2">
+            <span class="status-live">● VIGENTE</span>
+            <span class="cert-link-btn">Ampliar certificado →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="cert-card-v2 reveal-card" data-delay="250" onclick="openCertModal('assets/img/cert2.jpg', 'Homologación de Proveedores SGS', 'Solicitado por Yura S.A. (Grupo Gloria) | Calificación: Muy Bueno (92.36%)', 'Verificación de capacidad operativa, financiera, comercial y cumplimiento de sistemas de SST e ISO.')">
+        <div class="cert-ribbon"><span>ACREDITADO</span></div>
+        <div class="cert-preview-box">
+          <div class="cert-badge-floating" title="Certificación Oficial Verificada">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          </div>
+          <img src="assets/img/cert2.jpg" alt="Certificación SGS Yura" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80';">
+          <div class="cert-zoom-tag">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
+            <span>Ver documento</span>
+          </div>
+        </div>
+        <div class="cert-body-v2">
+          <div class="cert-tags-v2">
+            <span class="tag-red">SGS / YURA S.A.</span>
+            <span class="tag-gray">SST & ISO</span>
+          </div>
+          <h3>Homologación de Proveedores SGS</h3>
+          <p>Auditoría aprobada con puntaje destacado del 92.36% para servicios en plantas e instalaciones de Yura S.A.</p>
+          <div class="cert-footer-v2">
+            <span class="status-live">● VIGENTE</span>
+            <span class="cert-link-btn">Ampliar certificado →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="cert-card-v2 reveal-card" data-delay="400" onclick="openCertModal('assets/img/cert3.jpg', 'Certificado ISO 37001:2025 (INTERCERT)', 'Sistema de Gestión Anti soborno | Registro IC-AB-2608157', 'Acredita estándares internacionales en proyectos de ingeniería, electricidad, telecomunicaciones y mantenimiento.')">
+        <div class="cert-ribbon"><span>ISO NORMATIVA</span></div>
+        <div class="cert-preview-box">
+          <div class="cert-badge-floating gold-theme" title="Certificación Oficial ISO">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          </div>
+          <img src="assets/img/cert3.jpg" alt="Certificación ISO 37001 Intercert" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80';">
+          <div class="cert-zoom-tag">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
+            <span>Ver documento</span>
+          </div>
+        </div>
+        <div class="cert-body-v2">
+          <div class="cert-tags-v2">
+            <span class="tag-red">INTERCERT / IAF</span>
+            <span class="tag-gray">ISO 37001:2025</span>
+          </div>
+          <h3>Certificación Anti soborno ISO 37001</h3>
+          <p>Garantía de transparencia ética y cumplimiento regulatorio internacional en la ejecución de obras.</p>
+          <div class="cert-footer-v2">
+            <span class="status-live">● VIGENTE</span>
+            <span class="cert-link-btn">Ampliar certificado →</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
      PROCESO (TECNOLÓGICO Y EMPRESARIAL)
 ===================================================== -->
 <section class="section process-section" id="proceso">
   <div class="container">
-    <div class="section-heading centered">
+    <div class="section-heading centered reveal-fade-up">
       <span class="section-kicker">METODOLOGÍA DE TRABAJO</span>
       <h2>De la necesidad a la solución</h2>
       <p>Gestión técnica por etapas asegurando precisión, trazabilidad y máxima eficiencia en cada proyecto.</p>
@@ -185,7 +293,7 @@
     <div class="process-grid-tech">
       
       <!-- Paso 1 -->
-      <div class="tech-step-card">
+      <div class="tech-step-card reveal-card" data-delay="100">
         <div class="step-header">
           <span class="step-badge">01</span>
           <div class="step-icon">
@@ -203,7 +311,7 @@
       </div>
 
       <!-- Paso 2 -->
-      <div class="tech-step-card">
+      <div class="tech-step-card reveal-card" data-delay="200">
         <div class="step-header">
           <span class="step-badge">02</span>
           <div class="step-icon">
@@ -221,7 +329,7 @@
       </div>
 
       <!-- Paso 3 -->
-      <div class="tech-step-card">
+      <div class="tech-step-card reveal-card" data-delay="300">
         <div class="step-header">
           <span class="step-badge">03</span>
           <div class="step-icon">
@@ -239,7 +347,7 @@
       </div>
 
       <!-- Paso 4 -->
-      <div class="tech-step-card">
+      <div class="tech-step-card reveal-card" data-delay="400">
         <div class="step-header">
           <span class="step-badge">04</span>
           <div class="step-icon">
@@ -265,15 +373,15 @@
 ===================================================== -->
 <section class="section about-section" id="nosotros">
   <div class="container about-grid">
-    <div class="about-image-wrap">
-      <img src="assets/img/hero-bg-1.jpg" alt="INNOVAX Ingenieros">
+    <div class="about-image-wrap reveal-slide-right">
+      <img src="assets/img/hero-bg-1.png" alt="INNOVAX Ingenieros">
       <div class="about-badge">
         <strong>INNOVAX</strong>
         <span>Tecnología y Electricidad</span>
       </div>
     </div>
 
-    <div class="about-copy">
+    <div class="about-copy reveal-slide-left">
       <span class="section-kicker">NOSOTROS</span>
       <h2>Ingeniería que se convierte en resultados.</h2>
       <p>En INNOVAX Ingenieros desarrollamos soluciones enfocadas en electricidad, infraestructura de redes y servicios generales.</p>
@@ -294,7 +402,7 @@
 <section class="section contact-section" id="contacto">
   <div class="container contact-grid">
 
-    <div class="contact-copy">
+    <div class="contact-copy reveal-slide-right">
       <span class="section-kicker">COTIZACIONES</span>
       <h2>Cuéntanos qué necesitas.</h2>
       <p>Déjanos tus datos y una breve descripción de tu proyecto. Te contactaremos para revisar los detalles.</p>
@@ -320,8 +428,8 @@
       </div>
     </div>
 
-    <!-- FORMULARIO DE CONTACTO TECNOLÓGICO Y MODERNIZADO -->
-    <form class="contact-form modern-form" id="contactForm" action="php/enviar.php" method="POST">
+    <!-- FORMULARIO DE CONTACTO -->
+    <form class="contact-form modern-form reveal-zoom-in" id="contactForm" action="php/enviar.php" method="POST">
       <div class="form-header">
         <h3>Solicitar Cotización</h3>
         <p>Completa los datos para iniciar la evaluación técnica de tu proyecto.</p>
@@ -376,7 +484,7 @@
         </div>
       </div>
 
-      <input type="text" name="empresa_web" class="hp-field" tabindex="-1" autocomplete="off">
+      <input type="text" name="empresa_web" class="hp-field" tabindex="-1" autocomplete="off" style="display:none;">
 
       <button type="submit" class="btn btn-primary btn-submit">
         <span>Enviar solicitud</span>
@@ -397,28 +505,26 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     
-    <!-- Columna 1: Marca & Info Empresarial -->
-    <div class="footer-col footer-brand-col">
-      <img src="assets/img/logoblanco.png" alt="INNOVAX Ingenieros" class="footer-logo">
+    <div class="footer-col footer-brand-col reveal-fade-up">
+      <img src="assets/img/logoblanco.png" alt="INNOVAX Ingenieros" class="footer-logo" onerror="this.onerror=null; this.src='assets/img/logo.png';">
       <p class="footer-desc">
         Soluciones integrales en ingeniería eléctrica, infraestructura de redes y servicios generales para el sector industrial, comercial y corporativo.
       </p>
       <span class="footer-badge">Ingeniería & Tecnología</span>
     </div>
 
-    <!-- Columna 2: Navegación Rápida -->
-    <div class="footer-col">
+    <div class="footer-col reveal-fade-up">
       <h4 class="footer-title">Navegación</h4>
       <ul class="footer-links">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#servicios">Especialidades</a></li>
+        <li><a href="#certificaciones">Certificaciones</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#contacto">Cotizar Proyecto</a></li>
       </ul>
     </div>
 
-    <!-- Columna 3: Servicios Especializados -->
-    <div class="footer-col">
+    <div class="footer-col reveal-fade-up">
       <h4 class="footer-title">Especialidades</h4>
       <ul class="footer-links">
         <li><a href="servicio.html?tipo=electrico">Sistemas Eléctricos</a></li>
@@ -428,8 +534,7 @@
       </ul>
     </div>
 
-    <!-- Columna 4: Ubicación & Contacto Directo -->
-    <div class="footer-col">
+    <div class="footer-col reveal-fade-up">
       <h4 class="footer-title">Ubicación & Contacto</h4>
       <ul class="footer-contact-list">
         <li>
@@ -445,7 +550,6 @@
 
   </div>
 
-  <!-- Línea Inferior de Copyright y Derechos -->
   <div class="footer-bottom">
     <div class="container footer-bottom-inner">
       <p class="copyright">
@@ -458,7 +562,69 @@
 <a href="https://wa.me/51987270326?text=Hola,%20me%20gustaria%20cotizar%20un%20proyecto%20con%20INNOVAX.%20Mi%20nombre%20es%20" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">☎</a>
 <button class="back-top" id="backTop">↑</button>
 
+<!-- MODAL LIGHTBOX CERTIFICADOS -->
+<div class="image-lightbox" id="certLightbox">
+  <button id="certLightboxClose" aria-label="Cerrar">&times;</button>
+  <div class="lightbox-modal-content">
+    <div class="lightbox-image-wrap">
+      <img id="certLightboxImage" src="" alt="Vista previa del certificado">
+    </div>
+    <div class="lightbox-info-panel">
+      <div class="lightbox-badge">DOCUMENTO OFICIAL</div>
+      <h3 id="certLightboxTitle"></h3>
+      <p id="certLightboxSub" class="lightbox-sub"></p>
+      <div class="lightbox-divider"></div>
+      <p id="certLightboxDesc" class="lightbox-desc"></p>
+      <div class="lightbox-company-tag">
+        INNOVAX INGENIEROS E.I.R.L.
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="js/main.js"></script>
+
+<script>
+  function openCertModal(imageSrc, title, subtitle, description) {
+    const modal = document.getElementById('certLightbox');
+    const img = document.getElementById('certLightboxImage');
+    const titleEl = document.getElementById('certLightboxTitle');
+    const subEl = document.getElementById('certLightboxSub');
+    const descEl = document.getElementById('certLightboxDesc');
+    
+    if (modal && img) {
+      img.src = imageSrc;
+      if(titleEl) titleEl.textContent = title || '';
+      if(subEl) subEl.textContent = subtitle || '';
+      if(descEl) descEl.textContent = description || '';
+      modal.classList.add('active');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+
+    const certModal = document.getElementById('certLightbox');
+    const closeBtn = document.getElementById('certLightboxClose');
+
+    if (closeBtn && certModal) {
+      closeBtn.addEventListener('click', function() {
+        certModal.classList.remove('active');
+      });
+    }
+
+    if (certModal) {
+      certModal.addEventListener('click', function(e) {
+        if (e.target === certModal) {
+          certModal.classList.remove('active');
+        }
+      });
+    }
+  });
+</script>
 
 </body>
 </html>

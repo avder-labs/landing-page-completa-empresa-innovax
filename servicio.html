@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Servicios | INNOVAX Ingenieros</title>
-  <link rel="icon" href="assets/img/logo.png" type="image/png">
+  <link rel="icon" href="assets/img/icono.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -28,6 +28,7 @@
     <nav class="main-nav" id="mainNav">
       <a href="index.html">Inicio</a>
       <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#certificaciones">Certificaciones y Homologaciones</a>
       <a href="index.html#nosotros">Nosotros</a>
       <a href="index.html#contacto" class="nav-button">Cotizar proyecto</a>
     </nav>
@@ -36,9 +37,6 @@
 
 <main>
 
-<!-- =====================================================
-     CABECERA / HERO DINÁMICO
-===================================================== -->
 <section class="service-page-hero" id="serviceHero">
   <div class="hero-overlay"></div>
   <div class="hero-pattern"></div>
@@ -55,15 +53,12 @@
 
     <span class="section-kicker" id="serviceKicker">ESPECIALIDAD</span>
 
-    <h1 id="serviceTitle">Eléctrico</h1>
+    <h1 id="serviceTitle">Servicio</h1>
 
-    <p id="serviceIntro">Soluciones eléctricas para proyectos.</p>
+    <p id="serviceIntro">Cargando información...</p>
   </div>
 </section>
 
-<!-- =====================================================
-     DESCRIPCIÓN
-===================================================== -->
 <section class="section service-intro-section">
   <div class="container service-intro-grid">
     <div>
@@ -74,9 +69,6 @@
   </div>
 </section>
 
-<!-- =====================================================
-     PROYECTOS DEL SERVICIO
-===================================================== -->
 <section class="section service-projects-section">
   <div class="container">
     <div class="section-heading">
@@ -90,9 +82,6 @@
   </div>
 </section>
 
-<!-- =====================================================
-     QUÉ HACEMOS
-===================================================== -->
 <section class="section capabilities-section">
   <div class="container">
     <div class="section-heading centered">
@@ -104,9 +93,6 @@
   </div>
 </section>
 
-<!-- =====================================================
-     CTA
-===================================================== -->
 <section class="detail-cta">
   <div class="container detail-cta-inner">
     <div>
@@ -120,12 +106,8 @@
 
 </main>
 
-<!-- =====================================================
-     FOOTER EMPRESARIAL (PÁGINAS SECUNDARIAS)
-===================================================== -->
 <footer class="site-footer">
   <div class="container footer-inner">
-    
     <div class="footer-col footer-brand-col">
       <img src="assets/img/logoblanco.png" alt="INNOVAX Ingenieros" class="footer-logo">
       <p class="footer-desc">
@@ -139,6 +121,7 @@
       <ul class="footer-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="index.html#servicios">Especialidades</a></li>
+        <li><a href="index.html#certificaciones">Certificaciones</a></li>
         <li><a href="index.html#nosotros">Nosotros</a></li>
         <li><a href="index.html#contacto">Cotizar Proyecto</a></li>
       </ul>
@@ -167,7 +150,6 @@
         </li>
       </ul>
     </div>
-
   </div>
 
   <div class="footer-bottom">
@@ -179,319 +161,6 @@
   </div>
 </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', function(){
-
-    const services = {
-
-      /* ==================================================
-         ELÉCTRICO
-      ================================================== */
-      electrico: {
-        number: '01',
-        title: 'Eléctrico',
-        heroBg: 'assets/electrico/luz-emerg2.jpeg',
-        intro: 'Soluciones eléctricas desarrolladas para instalaciones seguras, ordenadas y funcionales.',
-        heading: 'Ingeniería y soluciones eléctricas',
-        description: 'Realizamos instalaciones, adecuaciones y trabajos eléctricos adaptados a las necesidades de cada proyecto. En esta área podrás conocer algunos de nuestros trabajos y proyectos realizados.',
-        capabilities: [
-          'Instalaciones eléctricas',
-          'Iluminación',
-          'Luces de emergencia',
-          'Tableros eléctricos',
-          'Puesta a tierra',
-          'Canalización',
-          'Adecuaciones eléctricas',
-          'Mantenimiento eléctrico y más'
-        ],
-        projects: [
-          {
-            id: 'luz-emergencia',
-            number: '01',
-            title: 'Instalación de luces de emergencia',
-            category: 'Iluminación y seguridad',
-            description: 'Instalación y adecuación de sistemas de iluminación de emergencia para mejorar la seguridad y visibilidad de los espacios.',
-            image: 'assets/electrico/luz-emerg2.jpeg',
-            photos: [
-              'assets/electrico/luz-emerg1.jpeg',
-              'assets/electrico/luz-emerg2.jpeg',
-              'assets/electrico/luz-emerg3.jpeg',
-              'assets/electrico/luz-emerg4.jpeg',
-              'assets/electrico/luz-emerg5.jpeg'
-            ]
-          },
-          {
-            id: 'pozo-tierra',
-            number: '02',
-            title: 'Sistema de puesta a tierra',
-            category: 'Protección eléctrica',
-            description: 'Implementación y adecuación de sistema de puesta a tierra para mejorar la protección de la instalación eléctrica.',
-            image: 'assets/electrico/pozo1.jpeg',
-            photos: [
-              'assets/electrico/pozo1.jpeg',
-              'assets/electrico/pozo2.jpeg',
-              'assets/electrico/pozo3.jpeg',
-              'assets/electrico/pozo4.jpeg',
-              'assets/electrico/pozo5.jpeg'
-            ]
-          },
-          {
-            id: 'acometida-bombas',
-            number: '03',
-            title: 'Acometida en cuarto de bombas',
-            category: 'Protección eléctrica',
-            description: 'Implementación y adecuación de la acometida eléctrica para garantizar el suministro continuo y seguro en el área de bombeo.',
-            image: 'assets/servgen/aco4.jpeg',
-            photos: [
-              'assets/servgen/aco1.jpeg',
-              'assets/servgen/aco2.jpeg',
-              'assets/servgen/aco3.jpeg',
-              'assets/servgen/aco4.jpeg',
-              'assets/servgen/aco5.jpeg'
-            ]
-          }
-        ]
-      },
-
-      /* ==================================================
-         REDES
-      ================================================== */
-      redes: {
-        number: '02',
-        title: 'Redes',
-        heroBg: 'assets/red/red4.jpeg',
-        intro: 'Infraestructura de comunicaciones organizada, funcional y preparada para las necesidades de cada proyecto.',
-        heading: 'Conectividad e infraestructura tecnológica',
-        description: 'Diseñamos e implementamos soluciones de cableado e infraestructura de comunicaciones. Cada proyecto busca mantener una instalación organizada, accesible y preparada para crecer.',
-        capabilities: [
-          'Cableado estructurado',
-          'Puntos de red',
-          'Fibra óptica',
-          'Racks',
-          'Patch panels',
-          'Organización de cableado',
-          'Canalización',
-          'Pruebas de conectividad y más'
-        ],
-        projects: [
-          {
-            id: 'camaras',
-            number: '01',
-            title: 'Instalación de Cámaras de Seguridad',
-            category: 'CCTV y Seguridad',
-            description: 'Servicio técnico integral de instalación y puesta en marcha de sistemas de cámaras de seguridad, que incluye el montado de equipos, tendido de cableado, canalización y configuración del sistema de grabación y monitoreo.',
-            image: 'assets/red/cam5.jpeg',
-            photos: [
-              'assets/red/cam1.jpeg',
-              'assets/red/cam2.jpeg',
-              'assets/red/cam3.jpeg',
-              'assets/red/cam4.jpeg',
-              'assets/red/cam5.jpeg',
-              'assets/red/cam6.jpeg',
-              'assets/red/cam7.jpeg',
-              'assets/red/cam8.jpeg',
-              'assets/red/cam9.jpeg'
-            ]
-          },
-          {
-            id: 'fibra-optica',
-            number: '02',
-            title: 'Instalación de Fibra Óptica',
-            category: 'Cableado estructurado',
-            description: 'Servicio técnico especializado en la canalización, tendido, fusión y certificación de fibra óptica para enlaces de alta velocidad.',
-            image: 'assets/red/fibra1.jpeg',
-            photos: [
-              'assets/red/fibra1.jpeg',
-              'assets/red/fibra2.jpeg',
-              'assets/red/fibra3.jpeg',
-              'assets/red/fibra4.jpeg',
-              'assets/red/fibra5.jpeg',
-              'assets/red/fibra6.jpeg',
-              'assets/red/fibra7.jpeg',
-              'assets/red/fibra8.jpeg',
-              'assets/red/fibra9.jpeg'
-            ]
-          },
-          {
-            id: 'mapa-calor',
-            number: '03',
-            title: 'Generación de Mapas de Calor',
-            category: 'Análisis de Redes Wi-Fi',
-            description: 'Análisis y simulación de la cobertura de red inalámbrica mediante mapeo térmico para garantizar la eliminación de zonas ciegas y optimizar el rendimiento.',
-            image: 'assets/red/mapa1.png',
-            photos: [
-              'assets/red/mapa1.png',
-              'assets/red/mapa2.png',
-              'assets/red/mapa3.png',
-              'assets/red/mapa4.png',
-              'assets/red/mapa5.png',
-              'assets/red/mapa6.png'
-            ]
-          }
-        ]
-      },
-
-      /* ==================================================
-         SERVICIOS GENERALES
-      ================================================== */
-      generales: {
-        number: '03',
-        title: 'Servicios Generales',
-        heroBg: 'assets/servgen/gen1.jpeg',
-        intro: 'Trabajos complementarios, mantenimiento y adecuaciones para mantener las instalaciones operativas.',
-        heading: 'Soluciones complementarias para tus instalaciones',
-        description: 'Esta área reúne trabajos generales, adecuaciones, mantenimiento y soporte complementario que permiten atender necesidades específicas de cada proyecto.',
-        capabilities: [
-          'Mantenimiento preventivo',
-          'Mantenimiento correctivo',
-          'Adecuaciones',
-          'Trabajos complementarios',
-          'Reparaciones',
-          'Instalaciones',
-          'Soporte técnico',
-          'Revisión de instalaciones y más'
-        ],
-        projects: [
-          {
-            id: 'acometida-bombas',
-            number: '01',
-            title: 'Acometida en cuarto de bombas',
-            category: 'Servicios generales',
-            description: 'Trabajos complementarios y adecuaciones realizados para mantener espacios e instalaciones en condiciones adecuadas de funcionamiento.',
-            image: 'assets/servgen/aco1.jpeg',
-            photos: [
-              'assets/servgen/aco1.jpeg',
-              'assets/servgen/aco2.jpeg',
-              'assets/servgen/aco3.jpeg',
-              'assets/servgen/aco4.jpeg',
-              'assets/servgen/aco5.jpeg'
-            ]
-          },
-          {
-            id: 'pintado-des',
-            number: '02',
-            title: 'Pintado de Desniveles',
-            category: 'Servicios generales',
-            description: 'Trabajos complementarios y adecuaciones realizados para mantener espacios e instalaciones en condiciones adecuadas de funcionamiento.',
-            image: 'assets/servgen/des3.jpg',
-            photos: [
-              'assets/servgen/des1.jpg',
-              'assets/servgen/des2.jpg',
-              'assets/servgen/des3.jpg',
-              'assets/servgen/des4.jpg',
-              'assets/servgen/des5.jpg',
-              'assets/servgen/des6.jpg',
-              'assets/servgen/des7.jpg',
-              'assets/servgen/des8.jpg',
-              'assets/servgen/des9.jpg',
-              'assets/servgen/des10.jpg',
-              'assets/servgen/des11.jpg',
-              'assets/servgen/des12.jpg',
-              'assets/servgen/des13.jpg',
-              'assets/servgen/des14.jpg',
-              'assets/servgen/des15.jpg',
-              'assets/servgen/des16.jpg',
-              'assets/servgen/des17.jpg',
-              'assets/servgen/des18.jpg',
-              'assets/servgen/des19.jpg'
-            ]
-          }
-        ]
-      }
-
-    };
-
-    /* ==================================================
-       OBTENER SERVICIO
-    ================================================== */
-    const params = new URLSearchParams(window.location.search);
-    const type = params.get('tipo') || 'electrico';
-    const service = services[type] || services.electrico;
-
-    /* ==================================================
-       DATOS PRINCIPALES Y FONDO HERO
-    ================================================== */
-    document.title = service.title + ' | INNOVAX Ingenieros';
-    
-    const heroSection = document.getElementById('serviceHero');
-    if (heroSection && service.heroBg) {
-      heroSection.style.backgroundImage = `url('${service.heroBg}')`;
-    }
-
-    document.getElementById('serviceNumber').textContent = service.number;
-    document.getElementById('serviceTitle').textContent = service.title;
-    document.getElementById('serviceIntro').textContent = service.intro;
-    document.getElementById('serviceHeading').textContent = service.heading;
-    document.getElementById('serviceDescription').textContent = service.description;
-
-    /* ==================================================
-       CAPACIDADES
-    ================================================== */
-    const capabilities = document.getElementById('capabilities');
-    service.capabilities.forEach(function(item, index){
-      const card = document.createElement('div');
-      card.className = 'capability-card';
-      card.innerHTML = `
-        <span>${String(index + 1).padStart(2,'0')}</span>
-        <strong>${item}</strong>
-      `;
-      capabilities.appendChild(card);
-    });
-
-    /* ==================================================
-       PROYECTOS
-    ================================================== */
-    const projects = document.getElementById('serviceProjects');
-    service.projects.forEach(function(project){
-      const article = document.createElement('article');
-      article.className = 'service-project-card';
-      article.innerHTML = `
-        <div class="service-project-image">
-          <img src="${project.image}" alt="${project.title}">
-          <span class="project-number">${project.number}</span>
-        </div>
-
-        <div class="service-project-content">
-          <span class="project-category">${project.category}</span>
-          <h3>${project.title}</h3>
-          <p>${project.description}</p>
-
-          <div class="project-photo-count">
-            <span>${project.photos.length}</span> fotografías del proyecto
-          </div>
-
-          <a href="proyecto.html?proyecto=${project.id}" class="project-detail-link">
-            Ver proyecto completo <b>→</b>
-          </a>
-        </div>
-      `;
-      projects.appendChild(article);
-    });
-
-    /* ==================================================
-       AÑO
-    ================================================== */
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    /* ==================================================
-       HEADER
-    ================================================== */
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', function(){
-      header.classList.toggle('scrolled', window.scrollY > 30);
-    });
-
-    /* ==================================================
-       MENÚ
-    ================================================== */
-    const toggle = document.getElementById('menuToggle');
-    const nav = document.getElementById('mainNav');
-    toggle.addEventListener('click', function(){
-      nav.classList.toggle('open');
-    });
-
-});
-</script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
