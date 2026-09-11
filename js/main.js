@@ -1,15 +1,5 @@
-/* =====================================================
-INNOVAX INGENIEROS - BASE DE DATOS Y LÓGICA DE PROYECTOS
-===================================================== */
-
-/* =====================================================
-INNOVAX INGENIEROS - BASE DE DATOS Y LÓGICA DE PROYECTOS
-===================================================== */
 
 const PROYECTOS_DATA = {
-  // ===================================================
-  // 1. ELÉCTRICO (4 PROYECTOS)
-  // ===================================================
   electrico: {
     numero: "01",
     kicker: "ESPECIALIDAD",
@@ -96,9 +86,6 @@ const PROYECTOS_DATA = {
     ]
   },
 
-  // ===================================================
-  // 2. REDES (6 PROYECTOS)
-  // ===================================================
   redes: {
     numero: "02",
     kicker: "ESPECIALIDAD",
@@ -266,9 +253,6 @@ const PROYECTOS_DATA = {
     ]
   },
 
-  // ===================================================
-  // 3. SERVICIOS GENERALES (4 PROYECTOS)
-  // ===================================================
   generales: {
     numero: "03",
     kicker: "ESPECIALIDAD",
@@ -401,12 +385,7 @@ const PROYECTOS_DATA = {
   }
 };
 
-/* =====================================================
-LÓGICA AUTOMÁTICA DE PÁGINAS Y COMPONENTES
-===================================================== */
-
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Menú Hamburguesa Responsive
   const menuToggle = document.getElementById('menuToggle');
   const mainNav = document.getElementById('mainNav');
 
@@ -416,7 +395,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. Efecto Header en Scroll
   const header = document.getElementById('header');
   if (header) {
     window.addEventListener('scroll', () => {
@@ -428,26 +406,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Renderizado de Servicio (servicio.html?tipo=xxx)
   if (window.location.pathname.includes('servicio.html')) {
     cargarPaginaServicio();
   }
 
-  // 4. Renderizado de Detalle de Proyecto (proyecto.html?tipo=xxx&id=yyy)
   if (window.location.pathname.includes('proyecto.html')) {
     cargarPaginaProyecto();
   }
 });
 
-/* =====================================================
-CARGAR PÁGINA DE SERVICIO (servicio.html)
-===================================================== */
 function cargarPaginaServicio() {
   const params = new URLSearchParams(window.location.search);
   const tipo = params.get('tipo') || 'electrico';
   const data = PROYECTOS_DATA[tipo] || PROYECTOS_DATA.electrico;
 
-  // Llenar datos principales
   setTextContent('serviceNumber', data.numero);
   setTextContent('serviceKicker', data.kicker);
   setTextContent('serviceTitle', data.titulo);
@@ -455,13 +427,11 @@ function cargarPaginaServicio() {
   setTextContent('serviceHeading', data.titulo);
   setTextContent('serviceDescription', data.descripcion);
 
-  // Imagen de fondo del hero
   const heroEl = document.getElementById('serviceHero');
   if (heroEl && data.proyectos.length > 0) {
     heroEl.style.backgroundImage = `url('${data.proyectos[0].imagenPrincipal}')`;
   }
 
-  // Renderizar Tarjetas de Proyectos
   const projectsContainer = document.getElementById('serviceProjects');
   if (projectsContainer) {
     projectsContainer.innerHTML = '';
@@ -489,7 +459,6 @@ function cargarPaginaServicio() {
     });
   }
 
-  // Renderizar Capacidades
   const capContainer = document.getElementById('capabilities');
   if (capContainer && data.capacidades) {
     capContainer.innerHTML = '';
@@ -505,9 +474,6 @@ function cargarPaginaServicio() {
   }
 }
 
-/* =====================================================
-CARGAR PÁGINA DE PROYECTO (proyecto.html)
-===================================================== */
 function cargarPaginaProyecto() {
   const params = new URLSearchParams(window.location.search);
   const tipo = params.get('tipo') || 'electrico';
@@ -516,38 +482,32 @@ function cargarPaginaProyecto() {
   const servicio = PROYECTOS_DATA[tipo] || PROYECTOS_DATA.electrico;
   let proyecto = servicio.proyectos.find(p => p.id === id);
 
-  // Si no encuentra el proyecto específico, carga el primero por defecto
   if (!proyecto) {
     proyecto = servicio.proyectos[0];
   }
 
-  // Cabecera e información básica
   setTextContent('projectCategory', tipo.toUpperCase());
   setTextContent('projectNumber', proyecto.numero || "01");
   setTextContent('projectTitle', proyecto.nombre);
   setTextContent('projectIntro', proyecto.intro);
   setTextContent('projectDescription', proyecto.descripcion);
 
-  // Cuadro lateral
   setTextContent('projectArea', tipo.toUpperCase());
   setTextContent('projectNameSmall', proyecto.nombre);
   setTextContent('projectPhotoTotal', proyecto.fotosTotal || 3);
 
-  // Imagen Principal
   const mainImg = document.getElementById('projectMainImage');
   if (mainImg) {
     mainImg.src = proyecto.imagenPrincipal;
     mainImg.alt = proyecto.nombre;
   }
 
-  // Enlaces de WhatsApp con mensaje contextualizado
   const mensajeWA = encodeURIComponent(`Hola Innovax Ingenieros, quisiera cotizar o recibir información sobre el proyecto: ${proyecto.nombre}`);
   const btnWA = document.getElementById('projectWhatsApp');
   const btnWABottom = document.getElementById('bottomWhatsApp');
   if (btnWA) btnWA.href = `https://wa.me/51987270326?text=${mensajeWA}`;
   if (btnWABottom) btnWABottom.href = `https://wa.me/51987270326?text=${mensajeWA}`;
 
-  // Renderizar Alcance / Trabajos Realizados
   const workContainer = document.getElementById('projectWork');
   if (workContainer && proyecto.trabajos) {
     workContainer.innerHTML = '';
@@ -563,7 +523,6 @@ function cargarPaginaProyecto() {
     });
   }
 
-  // Renderizar Galería de Fotografías
   const galeriaContainer = document.getElementById('projectGallery');
   if (galeriaContainer && proyecto.galeria) {
     galeriaContainer.innerHTML = '';
@@ -581,13 +540,9 @@ function cargarPaginaProyecto() {
     });
   }
 
-  // Configurar Lightbox de galería
   setupLightbox();
 }
 
-/* =====================================================
-LIGHTBOX DE GALERÍA DE PROYECTO
-===================================================== */
 function openLightbox(src) {
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImage');
@@ -614,7 +569,6 @@ function setupLightbox() {
   }
 }
 
-/* Helper para asignar texto de forma segura */
 function setTextContent(id, text) {
   const el = document.getElementById(id);
   if (el) el.textContent = text;
