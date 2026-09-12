@@ -1,30 +1,51 @@
+<!-- Sitio Web Oficial - Innovax Ingenieros 2026
+==============================================
+ *  Desarrollado y Diseñado por: [Andrea Alva Chávez / AVDER Digital Solutions]
+ *  Contacto: [+51 940 723 763]
+ *  Gmail: [avder.contact@gmail.com]
+ *  Tiktok - Instagram: [@avder.digital]
+ *  Fecha: 11/09/2026 
+ ==============================================-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Configuración de caracteres y vista adaptable para dispositivos móviles -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Título de la página y metadatos SEO -->
   <title>Servicios | INNOVAX Ingenieros</title>
+
+  <!-- Favicon e inclusión de fuentes tipográficas externas -->
   <link rel="icon" href="assets/img/icono.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Hoja de estilos principal -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- ==========================================
+     CABECERA Y NAVEGACIÓN PRINCIPAL
+     ========================================== -->
 <header class="site-header" id="header">
   <div class="container header-inner">
+    <!-- Logotipo principal de la empresa -->
     <a class="brand" href="index.html">
       <img src="assets/img/logo.png" alt="INNOVAX Ingenieros" class="brand-logo">
       <span class="brand-caption">TECNOLOGÍA Y ELECTRICIDAD</span>
     </a>
 
+    <!-- Botón hamburguesa para la navegación móvil -->
     <button class="menu-toggle" id="menuToggle">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
+    <!-- Menú de navegación principal con enlaces de ancla y vistas -->
     <nav class="main-nav" id="mainNav">
       <a href="index.html">Inicio</a>
       <a href="index.html#servicios">Servicios</a>
@@ -37,16 +58,22 @@
 
 <main>
 
+<!-- ==========================================
+     SECCIÓN HERO / ENCABEZADO DEL SERVICIO
+     ========================================== -->
 <section class="service-page-hero" id="serviceHero">
+  <!-- Superposiciones decorativas para la imagen de fondo -->
   <div class="hero-overlay"></div>
   <div class="hero-pattern"></div>
   
   <div class="container service-hero-content">
+    <!-- Botón para retornar a la sección de servicios en el inicio -->
     <a href="index.html#servicios" class="btn-back">
       <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
       Volver
     </a>
 
+    <!-- Indicador numérico y textos informativos dinamizados vía JavaScript -->
     <div class="service-page-number">
       <span id="serviceNumber">01</span>
     </div>
@@ -59,16 +86,23 @@
   </div>
 </section>
 
+<!-- ==========================================
+     SECCIÓN INTRODUCCIÓN Y DESCRIPCIÓN DEL ÁREA
+     ========================================== -->
 <section class="section service-intro-section">
   <div class="container service-intro-grid">
     <div>
       <span class="section-kicker">SOBRE ESTA ÁREA</span>
       <h2 id="serviceHeading">Soluciones especializadas</h2>
     </div>
+    <!-- Contenido descriptivo inyectado dinámicamente -->
     <p id="serviceDescription"></p>
   </div>
 </section>
 
+<!-- ==========================================
+     SECCIÓN PROYECTOS REALIZADOS
+     ========================================== -->
 <section class="section service-projects-section">
   <div class="container">
     <div class="section-heading">
@@ -78,10 +112,14 @@
       </div>
     </div>
 
+    <!-- Rejilla de proyectos relacionados del servicio (cargados dinámicamente) -->
     <div class="service-projects-grid" id="serviceProjects"></div>
   </div>
 </section>
 
+<!-- ==========================================
+     SECCIÓN CAPACIDADES Y ALCANCE DEL SERVICIO
+     ========================================== -->
 <section class="section capabilities-section">
   <div class="container">
     <div class="section-heading centered">
@@ -89,10 +127,14 @@
       <h2>¿Qué podemos hacer?</h2>
     </div>
 
+    <!-- Rejilla de tarjetas con las capacidades principales (cargadas dinámicamente) -->
     <div class="capabilities-grid" id="capabilities"></div>
   </div>
 </section>
 
+<!-- ==========================================
+     SECCIÓN LLAMADO A LA ACCIÓN (CTA)
+     ========================================== -->
 <section class="detail-cta">
   <div class="container detail-cta-inner">
     <div>
@@ -100,14 +142,19 @@
       <h2>Hablemos de lo que necesitas.</h2>
       <p>Cuéntanos tu proyecto y encontraremos una solución.</p>
     </div>
+    <!-- Enlace directo al formulario de contacto -->
     <a href="index.html#contacto" class="btn">Solicitar cotización →</a>
   </div>
 </section>
 
 </main>
 
+<!-- ==========================================
+     PIE DE PÁGINA / FOOTER
+     ========================================== -->
 <footer class="site-footer">
   <div class="container footer-inner">
+    <!-- Columna 1: Identidad visual y descripción corporativa -->
     <div class="footer-col footer-brand-col">
       <img src="assets/img/logoblanco.png" alt="INNOVAX Ingenieros" class="footer-logo">
       <p class="footer-desc">
@@ -116,6 +163,7 @@
       <span class="footer-badge">Ingeniería & Tecnología</span>
     </div>
 
+    <!-- Columna 2: Navegación rápida -->
     <div class="footer-col">
       <h4 class="footer-title">Navegación</h4>
       <ul class="footer-links">
@@ -127,6 +175,7 @@
       </ul>
     </div>
 
+    <!-- Columna 3: Servicios y especialidades -->
     <div class="footer-col">
       <h4 class="footer-title">Especialidades</h4>
       <ul class="footer-links">
@@ -137,6 +186,7 @@
       </ul>
     </div>
 
+    <!-- Columna 4: Información de contacto -->
     <div class="footer-col">
       <h4 class="footer-title">Ubicación & Contacto</h4>
       <ul class="footer-contact-list">
@@ -152,6 +202,7 @@
     </div>
   </div>
 
+  <!-- Derechos de autor y copyright -->
   <div class="footer-bottom">
     <div class="container footer-bottom-inner">
       <p class="copyright">
@@ -161,6 +212,7 @@
   </div>
 </footer>
 
+<!-- Inclusión del script JavaScript principal -->
 <script src="js/main.js"></script>
 </body>
 </html>
