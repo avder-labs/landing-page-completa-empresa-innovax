@@ -1,12 +1,19 @@
-// BASE DE DATOS LOCAL DE PROYECTOS Y CAPACIDADES (Objeto global PROYECTOS_DATA)
+// ==========================================
+// ESTRUCTURA DE DATOS: PROYECTOS Y SERVICIOS
+// ==========================================
+
+// Objeto principal que almacena toda la información de proyectos, categorías y detalles técnicos
 const PROYECTOS_DATA = {
-  // CONFIGURACIÓN Y PROYECTOS DEL ÁREA ELÉCTRICA
+  // ------------------------------------------
+  // CATEGORÍA 01: SERVICIOS ELÉCTRICOS
+  // ------------------------------------------
   electrico: {
     numero: "01",
     kicker: "ESPECIALIDAD",
     titulo: "Servicios Eléctricos",
     intro: "Diseño, montaje y mantenimiento de instalaciones eléctricas de alta y baja tensión, Iluminación industrial, tableros y puesta a tierra.",
     descripcion: "Brindamos soluciones integrales en ingeniería eléctrica bajo la normativa CNE y estándares ISO, orientadas a maximizar la seguridad, continuidad operativa y eficiencia energética de tu infraestructura industrial o comercial.",
+    // Lista de capacidades principales de la categoría
     capacidades: [
       { num: "01", text: "Instalación de tableros eléctricos de distribución y control." },
       { num: "02", text: "Sistemas de puesta a tierra y medición de resistividad." },
@@ -15,6 +22,7 @@ const PROYECTOS_DATA = {
       { num: "05", text: "Mantenimiento preventivo y correctivo de redes eléctricas." },
       { num: "06", text: "Certificación técnica de instalaciones eléctricas para Indeci." }
     ],
+    // Proyectos destacados de la categoría eléctrica
     proyectos: [
       {
         id: "electrico-1",
@@ -87,7 +95,9 @@ const PROYECTOS_DATA = {
     ]
   },
 
-  // CONFIGURACIÓN Y PROYECTOS DEL ÁREA DE REDES Y TELECOMUNICACIONES
+  // ------------------------------------------
+  // CATEGORÍA 02: REDES Y TELECOMUNICACIONES
+  // ------------------------------------------
   redes: {
     numero: "02",
     kicker: "ESPECIALIDAD",
@@ -255,7 +265,9 @@ const PROYECTOS_DATA = {
     ]
   },
 
-  // CONFIGURACIÓN Y PROYECTOS DEL ÁREA DE SERVICIOS GENERALES
+  // ------------------------------------------
+  // CATEGORÍA 03: SERVICIOS GENERALES
+  // ------------------------------------------
   generales: {
     numero: "03",
     kicker: "ESPECIALIDAD",
@@ -388,9 +400,13 @@ const PROYECTOS_DATA = {
   }
 };
 
-// EVENTO DE INICIALIZACIÓN DEL DOM
+// ==========================================
+// INICIALIZACIÓN DE EVENTOS DEL DOM
+// ==========================================
+
+// Evento principal al cargar completamente la estructura HTML de la página
 document.addEventListener('DOMContentLoaded', () => {
-  // Lógica para desplegar / ocultar el menú de navegación en dispositivos móviles
+  // Manejo del menú desplegable móvil (hamburguesa)
   const menuToggle = document.getElementById('menuToggle');
   const mainNav = document.getElementById('mainNav');
 
@@ -400,7 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Cambio de estilo del Header al realizar desplazamiento hacia abajo (Scroll)
+  // Cambio de estilo del Header al hacer scroll vertical
   const header = document.getElementById('header');
   if (header) {
     window.addEventListener('scroll', () => {
@@ -412,26 +428,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Identificador de la vista actual para ejecutar la carga dinámica correspondiente
+  // Detecta si la vista actual es la página general de servicios
   if (window.location.pathname.includes('servicio.html')) {
     cargarPaginaServicio();
   }
 
+  // Detecta si la vista actual es la página detallada de un proyecto
   if (window.location.pathname.includes('proyecto.html')) {
     cargarPaginaProyecto();
   }
 });
 
+// ==========================================
+// FUNCIONES DE CARGA Y RENDERIZADO
+// ==========================================
+
 /**
- * Función encargada de cargar dinámicamente los datos de la página servicio.html
- * basándose en el parámetro URL (?tipo=electrico/redes/generales)
+ * Carga dinámicamente el contenido para 'servicio.html' según los parámetros URL
  */
 function cargarPaginaServicio() {
   const params = new URLSearchParams(window.location.search);
   const tipo = params.get('tipo') || 'electrico';
   const data = PROYECTOS_DATA[tipo] || PROYECTOS_DATA.electrico;
 
-  // Inyección de textos generales
+  // Actualización de textos de la cabecera e introducción de la sección
   setTextContent('serviceNumber', data.numero);
   setTextContent('serviceKicker', data.kicker);
   setTextContent('serviceTitle', data.titulo);
@@ -439,13 +459,13 @@ function cargarPaginaServicio() {
   setTextContent('serviceHeading', data.titulo);
   setTextContent('serviceDescription', data.descripcion);
 
-  // Fondo dinámico de la cabecera
+  // Asignación de la imagen de fondo del banner principal (Hero)
   const heroEl = document.getElementById('serviceHero');
   if (heroEl && data.proyectos.length > 0) {
     heroEl.style.backgroundImage = `url('${data.proyectos[0].imagenPrincipal}')`;
   }
 
-  // Renderizado dinámico de tarjetas de proyectos
+  // Renderizado dinámico de la lista de tarjetas de proyectos
   const projectsContainer = document.getElementById('serviceProjects');
   if (projectsContainer) {
     projectsContainer.innerHTML = '';
@@ -473,7 +493,7 @@ function cargarPaginaServicio() {
     });
   }
 
-  // Renderizado dinámico de tarjetas de capacidades
+  // Renderizado dinámico del listado de capacidades/alcances del servicio
   const capContainer = document.getElementById('capabilities');
   if (capContainer && data.capacidades) {
     capContainer.innerHTML = '';
@@ -490,8 +510,7 @@ function cargarPaginaServicio() {
 }
 
 /**
- * Función encargada de renderizar detalladamente la información de proyecto.html
- * filtrando por los parámetros tipo e id (?tipo=redes&id=redes-1)
+ * Carga dinámicamente la información detallada de un proyecto específico en 'proyecto.html'
  */
 function cargarPaginaProyecto() {
   const params = new URLSearchParams(window.location.search);
@@ -501,12 +520,12 @@ function cargarPaginaProyecto() {
   const servicio = PROYECTOS_DATA[tipo] || PROYECTOS_DATA.electrico;
   let proyecto = servicio.proyectos.find(p => p.id === id);
 
-  // Respaldo en caso de no encontrar un ID válido
+  // Selección por defecto del primer proyecto si el parámetro ID no existe o no coincide
   if (!proyecto) {
     proyecto = servicio.proyectos[0];
   }
 
-  // Inyección de textos e imagen representativa
+  // Inyección de textos explicativos e identificadores
   setTextContent('projectCategory', tipo.toUpperCase());
   setTextContent('projectNumber', proyecto.numero || "01");
   setTextContent('projectTitle', proyecto.nombre);
@@ -517,20 +536,21 @@ function cargarPaginaProyecto() {
   setTextContent('projectNameSmall', proyecto.nombre);
   setTextContent('projectPhotoTotal', proyecto.fotosTotal || 3);
 
+  // Asignación de la imagen representativa del proyecto
   const mainImg = document.getElementById('projectMainImage');
   if (mainImg) {
     mainImg.src = proyecto.imagenPrincipal;
     mainImg.alt = proyecto.nombre;
   }
 
-  // Actualización dinámica de enlaces directos a WhatsApp con el nombre del proyecto
+  // Configuración de los enlaces directos a WhatsApp para cotización
   const mensajeWA = encodeURIComponent(`Hola Innovax Ingenieros, quisiera cotizar o recibir información sobre el proyecto: ${proyecto.nombre}`);
   const btnWA = document.getElementById('projectWhatsApp');
   const btnWABottom = document.getElementById('bottomWhatsApp');
   if (btnWA) btnWA.href = `https://wa.me/51987270326?text=${mensajeWA}`;
   if (btnWABottom) btnWABottom.href = `https://wa.me/51987270326?text=${mensajeWA}`;
 
-  // Lista dinámicamente construida de trabajos/actividades ejecutadas
+  // Renderizado dinámico del checklist de actividades/trabajos realizados
   const workContainer = document.getElementById('projectWork');
   if (workContainer && proyecto.trabajos) {
     workContainer.innerHTML = '';
@@ -546,7 +566,7 @@ function cargarPaginaProyecto() {
     });
   }
 
-  // Construcción de la galería de fotos del proyecto
+  // Renderizado dinámico de la galería fotográfica del proyecto
   const galeriaContainer = document.getElementById('projectGallery');
   if (galeriaContainer && proyecto.galeria) {
     galeriaContainer.innerHTML = '';
@@ -557,7 +577,7 @@ function cargarPaginaProyecto() {
         <span>${imgObj.label || 'PROYECTO'}</span>
         <img src="${imgObj.src}" alt="${imgObj.label}" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
       `;
-      // Evento al hacer clic para abrir la foto a pantalla completa
+      // Evento para abrir ampliación (lightbox) al hacer clic en una foto
       galItem.addEventListener('click', () => {
         openLightbox(imgObj.src);
       });
@@ -565,13 +585,16 @@ function cargarPaginaProyecto() {
     });
   }
 
-  // Inicialización de escuchadores del lightbox
+  // Inicialización de la lógica del Lightbox
   setupLightbox();
 }
 
+// ==========================================
+// COMPONENTE LIGHTBOX (VISOR DE IMÁGENES)
+// ==========================================
+
 /**
- * Muestra el Lightbox/Modal con la imagen seleccionada
- * @param {string} src Ruta de la imagen
+ * Abre el modal Lightbox asignando la ruta de la imagen seleccionada
  */
 function openLightbox(src) {
   const lightbox = document.getElementById('lightbox');
@@ -583,17 +606,19 @@ function openLightbox(src) {
 }
 
 /**
- * Registra eventos para el cierre del visor Lightbox
+ * Configura los eventos de cierre para el visor Lightbox
  */
 function setupLightbox() {
   const lightbox = document.getElementById('lightbox');
   const closeBtn = document.getElementById('lightboxClose');
 
   if (closeBtn && lightbox) {
+    // Cierre mediante el botón de cierre (X)
     closeBtn.addEventListener('click', () => {
       lightbox.classList.remove('active');
     });
 
+    // Cierre al presionar fuera del marco de la imagen (fondo oscuro)
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) {
         lightbox.classList.remove('active');
@@ -602,10 +627,12 @@ function setupLightbox() {
   }
 }
 
+// ==========================================
+// FUNCIONES DE UTILIDAD GENERAL
+// ==========================================
+
 /**
- * Función auxiliar para asignar contenido de texto de forma segura
- * @param {string} id ID del elemento HTML
- * @param {string} text Texto a insertar
+ * Función auxiliar para asignar contenido de texto seguro evitando manipulación de elementos inexistentes
  */
 function setTextContent(id, text) {
   const el = document.getElementById(id);
