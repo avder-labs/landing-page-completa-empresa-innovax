@@ -12,31 +12,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO: Título optimizado para motores de búsqueda -->
   <title>INNOVAX Ingenieros | Tecnología y Electricidad</title>
   <meta name="description" content="INNOVAX Ingenieros. Soluciones eléctricas, redes y servicios generales para proyectos.">
 
+  <!-- Favicon y recursos tipográficos -->
   <link rel="icon" href="assets/img/icono.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Hojas de estilo CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<!-- CABECERA FLOTANTE CON NAVEGACIÓN -->
 <header class="site-header" id="header">
   <div class="container header-inner">
+    <!-- Marca principal con control de errores en caso de fallo en la imagen -->
     <a class="brand" href="index.html">
       <img src="assets/img/logo.png" alt="INNOVAX Ingenieros" class="brand-logo" onerror="this.style.display='none';">
       <span class="brand-caption">TECNOLOGÍA Y ELECTRICIDAD</span>
     </a>
 
+    <!-- Botón interactivo para despliegue de menú en pantallas móviles -->
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
+    <!-- Navegación con salto suave a secciones fijas -->
     <nav class="main-av" id="mainNav">
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
@@ -49,15 +58,19 @@
 
 <main id="inicio">
 
+<!-- SECCIÓN HÉROE PRINCIPAL (SLIDER IMPACTANTE + CAPAS VISUALES) -->
 <section class="hero">
+  <!-- Contenedor de diapositivas tipo Slider para el fondo -->
   <div class="hero-slider">
     <div class="slide active" style="background-image:url('assets/img/hero-redes.jpg')"></div>
     <!--<div class="slide" style="background-image:url('assets/img/.jpg')"></div>-->
   </div>
 
+  <!-- Capa oscura e icono cuadrícula para un look tecnológico -->
   <div class="hero-overlay"></div>
   <div class="hero-pattern"></div>
 
+  <!-- Contenido principal y mensaje clave de propuesta de valor -->
   <div class="container hero-content">
     <div class="hero-copy reveal-fade-up">
       <div class="eyebrow">
@@ -66,6 +79,7 @@
       <h1>Soluciones que <br><strong>conectan y energizan</strong><br>tu proyecto.</h1>
       <p>Desarrollamos soluciones eléctricas, infraestructura de redes y servicios generales para empresas, industrias y proyectos.</p>
       
+      <!-- Llamados a la acción principales -->
       <div class="hero-actions">
         <a href="#servicios" class="btn btn-primary">Conoce nuestros servicios →</a>
         <a href="#contacto" class="btn btn-outline">Solicitar cotización</a>
@@ -73,6 +87,7 @@
     </div>
   </div>
 
+  <!-- Cinta inferior fija informativa -->
   <div class="hero-bottom">
     <div class="hero-bottom-inner">
       <b>INNOVAX INGENIEROS</b> SOLUCIONES PARA TU PROYECTO
@@ -80,6 +95,7 @@
   </div>
 </section>
 
+<!-- SECCIÓN DE INTRODUCCIÓN GENERAL DE LA EMPRESA -->
 <section class="section intro">
   <div class="container intro-grid">
     <div class="reveal-slide-right">
@@ -90,6 +106,7 @@
   </div>
 </section>
 
+<!-- SECCIÓN PRINCIPAL DE SERVICIOS / ESPECIALIDADES DE LA EMPRESA -->
 <section class="section services-section" id="servicios">
   <div class="container">
     <div class="section-heading reveal-fade-up">
@@ -99,8 +116,10 @@
       </div>
     </div>
 
+    <!-- Rejilla con las 3 tarjetas principales de servicios -->
     <div class="services-main-grid">
 
+      <!-- TARJETA 01: ELECTRICIDAD -->
       <a href="servicio.html?tipo=electrico" class="service-feature-card reveal-card" data-delay="100">
         <div class="service-feature-image">
           <img src="assets/electrico/luz-emerg2.jpeg" alt="Servicios eléctricos" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
@@ -121,6 +140,7 @@
         </div>
       </a>
 
+      <!-- TARJETA 02: REDES -->
       <a href="servicio.html?tipo=redes" class="service-feature-card reveal-card" data-delay="250">
         <div class="service-feature-image">
           <img src="assets/red/red4.jpeg" alt="Servicios de redes" onerror="this.onerror=null; this.src='assets/img/hero-redes.jpg';">
@@ -141,6 +161,7 @@
         </div>
       </a>
 
+      <!-- TARJETA 03: SERVICIOS GENERALES -->
       <a href="servicio.html?tipo=generales" class="service-feature-card reveal-card" data-delay="400">
         <div class="service-feature-image">
           <img src="assets/servgen/gen1.jpeg" alt="Servicios generales" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
@@ -165,7 +186,9 @@
   </div>
 </section>
 
+<!-- SECCIÓN DE CERTIFICACIONES Y HOMOLOGACIONES (FONDO DE VIDEO) -->
 <section class="section certs-showcase-v2" id="certificaciones">
+  <!-- Video en bucle en el fondo para estética industrial moderna -->
   <video class="cert-bg-video" autoplay loop muted playsinline>
     <source src="assets/video/videof.mp4" type="video/mp4">
   </video>
@@ -182,8 +205,10 @@
       <p>Acreditaciones oficiales e inspecciones que certifican nuestra calidad, cumplimiento normativo y seguridad industrial.</p>
     </div>
 
+    <!-- Malla de tarjetas interactiva de certificados oficiales -->
     <div class="certs-grid-v2">
 
+      <!-- CERTIFICADO 1: MEGA / MALL AVENTURA -->
       <div class="cert-card-v2 reveal-card" data-delay="100" onclick="openCertModal('assets/img/cert1.jpg', 'Certificado de Homologación MEGA', 'Solicitado por Mall Aventura S.A. | Calificación: Muy Bueno (95.85 ptos.)', 'Evaluación integral en operación, seguridad y salud en el trabajo, aspectos financieros y productivos.')">
         <div class="cert-ribbon"><span>ACREDITADO</span></div>
         <div class="cert-preview-box">
@@ -210,6 +235,7 @@
         </div>
       </div>
 
+      <!-- CERTIFICADO 2: SGS / YURA S.A. -->
       <div class="cert-card-v2 reveal-card" data-delay="250" onclick="openCertModal('assets/img/cert2.jpg', 'Homologación de Proveedores SGS', 'Solicitado por Yura S.A. (Grupo Gloria) | Calificación: Muy Bueno (92.36%)', 'Verificación de capacidad operativa, financiera, comercial y cumplimiento de sistemas de SST e ISO.')">
         <div class="cert-ribbon"><span>ACREDITADO</span></div>
         <div class="cert-preview-box">
@@ -236,6 +262,7 @@
         </div>
       </div>
 
+      <!-- CERTIFICADO 3: ISO 37001 -->
       <div class="cert-card-v2 reveal-card" data-delay="400" onclick="openCertModal('assets/img/cert3.jpg', 'Certificado ISO 37001:2025 (INTERCERT)', 'Sistema de Gestión Anti soborno | Registro IC-AB-2608157', 'Acredita estándares internacionales en proyectos de ingeniería, electricidad, telecomunicaciones y mantenimiento.')">
         <div class="cert-ribbon"><span>ISO NORMATIVA</span></div>
         <div class="cert-preview-box">
@@ -265,6 +292,7 @@
   </div>
 </section>
 
+<!-- SECCIÓN DE PASOS O METODOLOGÍA DE TRABAJO -->
 <section class="section process-section" id="proceso">
   <div class="container">
     <div class="section-heading centered reveal-fade-up">
@@ -273,8 +301,10 @@
       <p>Gestión técnica por etapas asegurando precisión, trazabilidad y máxima eficiencia en cada proyecto.</p>
     </div>
 
+    <!-- Pasos estructurados de la metodología de servicio -->
     <div class="process-grid-tech">
     
+      <!-- PASO 1 -->
       <div class="tech-step-card reveal-card" data-delay="100">
         <div class="step-header">
           <span class="step-badge">01</span>
@@ -292,6 +322,7 @@
         </div>
       </div>
 
+      <!-- PASO 2 -->
       <div class="tech-step-card reveal-card" data-delay="200">
         <div class="step-header">
           <span class="step-badge">02</span>
@@ -309,6 +340,7 @@
         </div>
       </div>
 
+      <!-- PASO 3 -->
       <div class="tech-step-card reveal-card" data-delay="300">
         <div class="step-header">
           <span class="step-badge">03</span>
@@ -326,6 +358,7 @@
         </div>
       </div>
 
+      <!-- PASO 4 -->
       <div class="tech-step-card reveal-card" data-delay="400">
         <div class="step-header">
           <span class="step-badge">04</span>
@@ -347,6 +380,7 @@
   </div>
 </section>
 
+<!-- SECCIÓN ACERCA DE NOSOTROS -->
 <section class="section about-section" id="nosotros">
   <div class="container about-grid">
     <div class="about-image-wrap reveal-slide-right">
@@ -372,9 +406,11 @@
   </div>
 </section>
 
+<!-- SECCIÓN DE CONTACTO, UBICACIÓN Y FORMULARIO PHP -->
 <section class="section contact-section" id="contacto">
   <div class="container contact-grid">
 
+    <!-- Datos directos de WhatsApp, Dirección e integración con Google Maps -->
     <div class="contact-copy reveal-slide-right">
       <span class="section-kicker">COTIZACIONES</span>
       <h2>Cuéntanos qué necesitas.</h2>
@@ -401,12 +437,14 @@
       </div>
     </div>
 
+    <!-- FORMULARIO DE COTIZACIÓN (Envía los datos a php/enviar.php) -->
     <form class="contact-form modern-form reveal-zoom-in" id="contactForm" action="php/enviar.php" method="POST">
       <div class="form-header">
         <h3>Solicitar Cotización</h3>
         <p>Completa los datos para iniciar la evaluación técnica de tu proyecto.</p>
       </div>
 
+      <!-- Nombre y Teléfono -->
       <div class="form-row">
         <div class="input-group">
           <label for="nombre">Nombre completo</label>
@@ -425,6 +463,7 @@
         </div>
       </div>
 
+      <!-- Correo Electrónico y Selección de Servicio -->
       <div class="form-row">
         <div class="input-group">
           <label for="email">Correo electrónico</label>
@@ -448,6 +487,7 @@
         </div>
       </div>
 
+      <!-- Área para detalles del proyecto / mensaje -->
       <div class="input-group full-width">
         <label for="mensaje">Cuéntanos sobre tu proyecto</label>
         <div class="input-wrapper textarea-wrapper">
@@ -456,13 +496,16 @@
         </div>
       </div>
 
+      <!-- CAMPO TRAMPA O HONEYPOT (Protección Antispam invisible para usuarios reales) -->
       <input type="text" name="empresa_web" class="hp-field" tabindex="-1" autocomplete="off" style="display:none;">
 
+      <!-- Botón de envío del formulario -->
       <button type="submit" class="btn btn-primary btn-submit">
         <span>Enviar solicitud</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
       </button>
 
+      <!-- Mensaje de estado devuelto por el servidor PHP tras el envío -->
       <p id="formStatus" class="form-status"></p>
     </form>
 
@@ -471,6 +514,7 @@
 
 </main>
 
+<!-- PIE DE PÁGINA (Footer) -->
 <footer class="site-footer">
   <div class="container footer-inner">
     
@@ -528,9 +572,11 @@
   </div>
 </footer>
 
+<!-- BOTÓN FLOTANTE DE WHATSAPP Y NAVEGACIÓN SUPERIOR ALTA -->
 <a href="https://wa.me/51987270326?text=Hola,%20me%20gustaria%20cotizar%20un%20proyecto%20con%20INNOVAX.%20Mi%20nombre%20es%20" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">☎</a>
 <button class="back-top" id="backTop">↑</button>
 
+<!-- VENTANA MODAL LIGHTBOX PARA AMPLIAR CERTIFICADOS -->
 <div class="image-lightbox" id="certLightbox">
   <button id="certLightboxClose" aria-label="Cerrar">&times;</button>
   <div class="lightbox-modal-content">
@@ -550,9 +596,12 @@
   </div>
 </div>
 
+<!-- Lógica interactiva en JS global -->
 <script src="js/main.js"></script>
 
+<!-- LÓGICA LOCAL EN JAVASCRIPT PARA EL MANEJO DE MODALES DE CERTIFICADOS Y FECHAS -->
 <script>
+  // Función para abrir la ventana modal y llenar los campos del certificado
   function openCertModal(imageSrc, title, subtitle, description) {
     const modal = document.getElementById('certLightbox');
     const img = document.getElementById('certLightboxImage');
@@ -569,7 +618,9 @@
     }
   }
 
+  // Event Listeners para inicialización y cierre de modal
   document.addEventListener('DOMContentLoaded', function() {
+    // Inyección del año actual en el copyright
     const yearSpan = document.getElementById('year');
     if (yearSpan) {
       yearSpan.textContent = new Date().getFullYear();
@@ -578,12 +629,14 @@
     const certModal = document.getElementById('certLightbox');
     const closeBtn = document.getElementById('certLightboxClose');
 
+    // Cerrar modal al hacer clic en la X
     if (closeBtn && certModal) {
       closeBtn.addEventListener('click', function() {
         certModal.classList.remove('active');
       });
     }
 
+    // Cerrar modal al hacer clic fuera del contenido principal
     if (certModal) {
       certModal.addEventListener('click', function(e) {
         if (e.target === certModal) {

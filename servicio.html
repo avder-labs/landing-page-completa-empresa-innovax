@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Definición de la codificación y soporte de vista responsiva -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Servicios | INNOVAX Ingenieros</title>
+  
+  <!-- Icono e importación de estilos globales y tipografías -->
   <link rel="icon" href="assets/img/icono.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +15,7 @@
 </head>
 <body>
 
+<!-- ENCABEZADO Y NAVEGACIÓN -->
 <header class="site-header" id="header">
   <div class="container header-inner">
     <a class="brand" href="index.html">
@@ -19,12 +23,14 @@
       <span class="brand-caption">TECNOLOGÍA Y ELECTRICIDAD</span>
     </a>
 
+    <!-- Botón hamburguesa para la vista móvil -->
     <button class="menu-toggle" id="menuToggle">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
+    <!-- Menú con navegación interna y externa -->
     <nav class="main-nav" id="mainNav">
       <a href="index.html">Inicio</a>
       <a href="index.html#servicios">Servicios</a>
@@ -37,16 +43,19 @@
 
 <main>
 
+<!-- SECCIÓN CABECERA DE SERVICIO (Hero dinámico configurado desde main.js) -->
 <section class="service-page-hero" id="serviceHero">
   <div class="hero-overlay"></div>
   <div class="hero-pattern"></div>
   
   <div class="container service-hero-content">
+    <!-- Botón para regresar a la vista de servicios de la portada principal -->
     <a href="index.html#servicios" class="btn-back">
       <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
       Volver
     </a>
 
+    <!-- Indicador dinámico del número y nombre del área -->
     <div class="service-page-number">
       <span id="serviceNumber">01</span>
     </div>
@@ -59,6 +68,7 @@
   </div>
 </section>
 
+<!-- SECCIÓN DE PRESENTACIÓN Y DESCRIPCIÓN DEL ÁREA TÉCNICA -->
 <section class="section service-intro-section">
   <div class="container service-intro-grid">
     <div>
@@ -69,6 +79,7 @@
   </div>
 </section>
 
+<!-- SECCIÓN CON CATÁLOGO DE PROYECTOS VINCULADOS A ESTA ESPECIALIDAD -->
 <section class="section service-projects-section">
   <div class="container">
     <div class="section-heading">
@@ -78,10 +89,12 @@
       </div>
     </div>
 
+    <!-- Contenedor renderizado dinámicamente según el parámetro de la URL (tipo=electrico/redes/generales) -->
     <div class="service-projects-grid" id="serviceProjects"></div>
   </div>
 </section>
 
+<!-- SECCIÓN DE CAPACIDADES Y ALCANCE TÉCNICO DE LA ESPECIALIDAD -->
 <section class="section capabilities-section">
   <div class="container">
     <div class="section-heading centered">
@@ -89,10 +102,12 @@
       <h2>¿Qué podemos hacer?</h2>
     </div>
 
+    <!-- Tarjetas de capacidades inyectadas por el script dinámico -->
     <div class="capabilities-grid" id="capabilities"></div>
   </div>
 </section>
 
+<!-- SECCIÓN DE CONVERSIÓN RÁPIDA (CTA) -->
 <section class="detail-cta">
   <div class="container detail-cta-inner">
     <div>
@@ -106,6 +121,7 @@
 
 </main>
 
+<!-- PIE DE PÁGINA (Footer) -->
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-col footer-brand-col">
@@ -161,6 +177,7 @@
   </div>
 </footer>
 
+<!-- Carga del archivo JavaScript principal -->
 <script src="js/main.js"></script>
 </body>
 </html>

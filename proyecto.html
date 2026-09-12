@@ -1,30 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Configuración de codificación de caracteres y escala de pantalla para diseño adaptable (Responsive) -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Título dinámico que se muestra en la pestaña del navegador -->
   <title>Proyecto | INNOVAX Ingenieros</title>
+  
+  <!-- Icono del sitio web (Favicon) -->
   <link rel="icon" href="assets/img/icono.png" type="image/png">
+  
+  <!-- Preconexión para optimizar la carga de fuentes tipográficas desde Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Carga de las familias tipográficas oficiales: Inter y Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Estilos globales de la página web -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- ENCABEZADO PRINCIPAL (Barra de navegación del sitio) -->
 <header class="site-header" id="header">
   <div class="container header-inner">
+    <!-- Logotipo principal que redirige al inicio -->
     <a class="brand" href="index.html">
       <img src="assets/img/logo.png" alt="INNOVAX Ingenieros" class="brand-logo">
       <span class="brand-caption">TECNOLOGÍA Y ELECTRICIDAD</span>
     </a>
 
+    <!-- Botón hamburguesa para dispositivos móviles -->
     <button class="menu-toggle" id="menuToggle">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
+    <!-- Menú principal de navegación con enlaces a secciones estratégicas -->
     <nav class="main-nav" id="mainNav">
       <a href="index.html">Inicio</a>
       <a href="index.html#servicios">Servicios</a>
@@ -37,25 +52,31 @@
 
 <main>
 
+<!-- SECCIÓN HÉROE DEL DETALLE DEL PROYECTO (Encabezado dinámico) -->
 <section class="project-detail-hero">
   <div class="container">
+    <!-- Botón de retroceso para volver a la página o sección previa -->
     <a href="javascript:history.back()" class="btn-back">
       <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
       Volver
     </a>
 
+    <!-- Estructura principal con información del proyecto e imagen destacada -->
     <div class="project-detail-layout">
+      <!-- Textos e información técnica inyectados dinámicamente con JavaScript -->
       <div class="project-detail-copy">
         <span class="section-kicker" id="projectCategory">ELÉCTRICO</span>
         <span class="project-big-number" id="projectNumber">01</span>
         <h1 id="projectTitle">Proyecto</h1>
         <p id="projectIntro"></p>
 
+        <!-- Botón de conversión directa hacia WhatsApp con un mensaje predeterminado del proyecto -->
         <a href="https://wa.me/51987270326" target="_blank" class="btn btn-primary" id="projectWhatsApp">
           Consultar proyecto →
         </a>
       </div>
 
+      <!-- Imagen representativa / destacada del proyecto -->
       <div class="project-feature-image">
         <img id="projectMainImage" src="assets/electrico/luz-emerg2.jpeg" alt="Proyecto INNOVAX">
       </div>
@@ -63,6 +84,7 @@
   </div>
 </section>
 
+<!-- SECCIÓN DE INFORMACIÓN TÉCNICA Y DESCRIPCIÓN DEL PROYECTO -->
 <section class="section project-information">
   <div class="container project-info-grid">
     <div>
@@ -71,6 +93,7 @@
       <p id="projectDescription"></p>
     </div>
 
+    <!-- Panel lateral tipo Ficha Técnica con metadatos del proyecto -->
     <aside class="project-data-box">
       <span>ÁREA</span>
       <strong id="projectArea">Eléctrico</strong>
@@ -84,6 +107,7 @@
   </div>
 </section>
 
+<!-- SECCIÓN DE ALCANCE Y ACTIVIDADES DESARROLLADAS -->
 <section class="section work-section">
   <div class="container">
     <div class="section-heading">
@@ -94,10 +118,12 @@
       <p>Principales actividades desarrolladas dentro del proyecto.</p>
     </div>
 
+    <!-- Contenedor donde JS inyectará la lista de tareas/alcances técnicos realizada -->
     <div class="work-list" id="projectWork"></div>
   </div>
 </section>
 
+<!-- SECCIÓN DE GALERÍA FOTOGRÁFICA DEL PROYECTO -->
 <section class="section project-gallery-section">
   <div class="container">
     <div class="section-heading">
@@ -107,10 +133,12 @@
       </div>
     </div>
 
+    <!-- Contenedor dinámico para renderizar la galería de fotos del proyecto -->
     <div class="project-gallery" id="projectGallery"></div>
   </div>
 </section>
 
+<!-- SECCIÓN LLAMADO A LA ACCIÓN (CTA) FINAL -->
 <section class="detail-cta">
   <div class="container detail-cta-inner">
     <div>
@@ -119,6 +147,7 @@
       <p>Cuéntanos qué necesitas y evaluamos tu proyecto.</p>
     </div>
 
+    <!-- Enlace alternativo para contacto rápido por WhatsApp -->
     <a href="https://wa.me/51987270326" target="_blank" class="btn btn-primary" id="bottomWhatsApp">
       Hablar por WhatsApp →
     </a>
@@ -127,8 +156,10 @@
 
 </main>
 
+<!-- PIE DE PÁGINA (Footer general del sitio web) -->
 <footer class="site-footer">
   <div class="container footer-inner">
+    <!-- Identidad corporativa en el pie de página -->
     <div class="footer-col footer-brand-col">
       <img src="assets/img/logoblanco.png" alt="INNOVAX Ingenieros" class="footer-logo">
       <p class="footer-desc">
@@ -137,6 +168,7 @@
       <span class="footer-badge">Ingeniería & Tecnología</span>
     </div>
 
+    <!-- Enlaces de navegación rápida -->
     <div class="footer-col">
       <h4 class="footer-title">Navegación</h4>
       <ul class="footer-links">
@@ -148,6 +180,7 @@
       </ul>
     </div>
 
+    <!-- Enlaces con filtro dinámico por especialidad -->
     <div class="footer-col">
       <h4 class="footer-title">Especialidades</h4>
       <ul class="footer-links">
@@ -158,6 +191,7 @@
       </ul>
     </div>
 
+    <!-- Información técnica de ubicación y líneas telefónicas de atención -->
     <div class="footer-col">
       <h4 class="footer-title">Ubicación & Contacto</h4>
       <ul class="footer-contact-list">
@@ -173,6 +207,7 @@
     </div>
   </div>
 
+  <!-- Derechos reservados y año dinámico -->
   <div class="footer-bottom">
     <div class="container footer-bottom-inner">
       <p class="copyright">
@@ -182,11 +217,13 @@
   </div>
 </footer>
 
+<!-- MODAL LIGHTBOX (Visualizador de fotos a pantalla completa) -->
 <div class="image-lightbox" id="lightbox">
   <button id="lightboxClose" aria-label="Cerrar imagen">×</button>
   <img id="lightboxImage" src="" alt="">
 </div>
 
+<!-- Lógica JavaScript personalizada del proyecto -->
 <script src="js/main.js"></script>
 </body>
 </html>

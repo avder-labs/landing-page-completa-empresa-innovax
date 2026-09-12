@@ -1,5 +1,6 @@
-
+// BASE DE DATOS LOCAL DE PROYECTOS Y CAPACIDADES (Objeto global PROYECTOS_DATA)
 const PROYECTOS_DATA = {
+  // CONFIGURACIÓN Y PROYECTOS DEL ÁREA ELÉCTRICA
   electrico: {
     numero: "01",
     kicker: "ESPECIALIDAD",
@@ -86,6 +87,7 @@ const PROYECTOS_DATA = {
     ]
   },
 
+  // CONFIGURACIÓN Y PROYECTOS DEL ÁREA DE REDES Y TELECOMUNICACIONES
   redes: {
     numero: "02",
     kicker: "ESPECIALIDAD",
@@ -253,6 +255,7 @@ const PROYECTOS_DATA = {
     ]
   },
 
+  // CONFIGURACIÓN Y PROYECTOS DEL ÁREA DE SERVICIOS GENERALES
   generales: {
     numero: "03",
     kicker: "ESPECIALIDAD",
@@ -385,7 +388,9 @@ const PROYECTOS_DATA = {
   }
 };
 
+// EVENTO DE INICIALIZACIÓN DEL DOM
 document.addEventListener('DOMContentLoaded', () => {
+  // Lógica para desplegar / ocultar el menú de navegación en dispositivos móviles
   const menuToggle = document.getElementById('menuToggle');
   const mainNav = document.getElementById('mainNav');
 
@@ -395,6 +400,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Cambio de estilo del Header al realizar desplazamiento hacia abajo (Scroll)
   const header = document.getElementById('header');
   if (header) {
     window.addEventListener('scroll', () => {
@@ -406,6 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Identificador de la vista actual para ejecutar la carga dinámica correspondiente
   if (window.location.pathname.includes('servicio.html')) {
     cargarPaginaServicio();
   }
@@ -415,11 +422,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+/**
+ * Función encargada de cargar dinámicamente los datos de la página servicio.html
+ * basándose en el parámetro URL (?tipo=electrico/redes/generales)
+ */
 function cargarPaginaServicio() {
   const params = new URLSearchParams(window.location.search);
   const tipo = params.get('tipo') || 'electrico';
   const data = PROYECTOS_DATA[tipo] || PROYECTOS_DATA.electrico;
 
+  // Inyección de textos generales
   setTextContent('serviceNumber', data.numero);
   setTextContent('serviceKicker', data.kicker);
   setTextContent('serviceTitle', data.titulo);
@@ -427,11 +439,13 @@ function cargarPaginaServicio() {
   setTextContent('serviceHeading', data.titulo);
   setTextContent('serviceDescription', data.descripcion);
 
+  // Fondo dinámico de la cabecera
   const heroEl = document.getElementById('serviceHero');
   if (heroEl && data.proyectos.length > 0) {
     heroEl.style.backgroundImage = `url('${data.proyectos[0].imagenPrincipal}')`;
   }
 
+  // Renderizado dinámico de tarjetas de proyectos
   const projectsContainer = document.getElementById('serviceProjects');
   if (projectsContainer) {
     projectsContainer.innerHTML = '';
@@ -459,6 +473,7 @@ function cargarPaginaServicio() {
     });
   }
 
+  // Renderizado dinámico de tarjetas de capacidades
   const capContainer = document.getElementById('capabilities');
   if (capContainer && data.capacidades) {
     capContainer.innerHTML = '';
@@ -474,6 +489,10 @@ function cargarPaginaServicio() {
   }
 }
 
+/**
+ * Función encargada de renderizar detalladamente la información de proyecto.html
+ * filtrando por los parámetros tipo e id (?tipo=redes&id=redes-1)
+ */
 function cargarPaginaProyecto() {
   const params = new URLSearchParams(window.location.search);
   const tipo = params.get('tipo') || 'electrico';
@@ -482,10 +501,12 @@ function cargarPaginaProyecto() {
   const servicio = PROYECTOS_DATA[tipo] || PROYECTOS_DATA.electrico;
   let proyecto = servicio.proyectos.find(p => p.id === id);
 
+  // Respaldo en caso de no encontrar un ID válido
   if (!proyecto) {
     proyecto = servicio.proyectos[0];
   }
 
+  // Inyección de textos e imagen representativa
   setTextContent('projectCategory', tipo.toUpperCase());
   setTextContent('projectNumber', proyecto.numero || "01");
   setTextContent('projectTitle', proyecto.nombre);
@@ -502,12 +523,14 @@ function cargarPaginaProyecto() {
     mainImg.alt = proyecto.nombre;
   }
 
+  // Actualización dinámica de enlaces directos a WhatsApp con el nombre del proyecto
   const mensajeWA = encodeURIComponent(`Hola Innovax Ingenieros, quisiera cotizar o recibir información sobre el proyecto: ${proyecto.nombre}`);
   const btnWA = document.getElementById('projectWhatsApp');
   const btnWABottom = document.getElementById('bottomWhatsApp');
   if (btnWA) btnWA.href = `https://wa.me/51987270326?text=${mensajeWA}`;
   if (btnWABottom) btnWABottom.href = `https://wa.me/51987270326?text=${mensajeWA}`;
 
+  // Lista dinámicamente construida de trabajos/actividades ejecutadas
   const workContainer = document.getElementById('projectWork');
   if (workContainer && proyecto.trabajos) {
     workContainer.innerHTML = '';
@@ -523,6 +546,7 @@ function cargarPaginaProyecto() {
     });
   }
 
+  // Construcción de la galería de fotos del proyecto
   const galeriaContainer = document.getElementById('projectGallery');
   if (galeriaContainer && proyecto.galeria) {
     galeriaContainer.innerHTML = '';
@@ -533,6 +557,7 @@ function cargarPaginaProyecto() {
         <span>${imgObj.label || 'PROYECTO'}</span>
         <img src="${imgObj.src}" alt="${imgObj.label}" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
       `;
+      // Evento al hacer clic para abrir la foto a pantalla completa
       galItem.addEventListener('click', () => {
         openLightbox(imgObj.src);
       });
@@ -540,9 +565,14 @@ function cargarPaginaProyecto() {
     });
   }
 
+  // Inicialización de escuchadores del lightbox
   setupLightbox();
 }
 
+/**
+ * Muestra el Lightbox/Modal con la imagen seleccionada
+ * @param {string} src Ruta de la imagen
+ */
 function openLightbox(src) {
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImage');
@@ -552,6 +582,9 @@ function openLightbox(src) {
   }
 }
 
+/**
+ * Registra eventos para el cierre del visor Lightbox
+ */
 function setupLightbox() {
   const lightbox = document.getElementById('lightbox');
   const closeBtn = document.getElementById('lightboxClose');
@@ -569,6 +602,11 @@ function setupLightbox() {
   }
 }
 
+/**
+ * Función auxiliar para asignar contenido de texto de forma segura
+ * @param {string} id ID del elemento HTML
+ * @param {string} text Texto a insertar
+ */
 function setTextContent(id, text) {
   const el = document.getElementById(id);
   if (el) el.textContent = text;
