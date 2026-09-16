@@ -55,7 +55,7 @@ $servicio = limpiar($_POST['servicio'] ?? '');
 $mensaje  = trim($_POST['mensaje']     ?? '');
 
 // Validación de campos obligatorios
-if ($nombre === '' || $telefono === '' \vert{}\vert{}$email === '' || $servicio === '' \vert{}\vert{}$mensaje === '') {
+if ($nombre === '' || $telefono === '' || $email === '' || $servicio === '' || $mensaje === '') {
     responder(false, 'Todos los campos son obligatorios.');
 }
 

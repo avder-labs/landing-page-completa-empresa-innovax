@@ -10,46 +10,37 @@
 <html lang="es">
 
 <head>
-  <!-- Configuración de caracteres y vista adaptable para dispositivos móviles -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Título de la página y metadatos SEO -->
+
   <title>INNOVAX Ingenieros | Tecnología y Electricidad</title>
   <meta name="description" content="INNOVAX Ingenieros. Soluciones eléctricas, redes y servicios generales para proyectos.">
 
-  <!-- Favicon e inclusión de fuentes tipográficas externas -->
   <link rel="icon" href="assets/img/icono.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
-  
-  <!-- Hoja de estilos principal -->
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<!-- ==========================================
-     CABECERA Y NAVEGACIÓN PRINCIPAL
-     ========================================== -->
 <header class="site-header" id="header">
   <div class="container header-inner">
-    <!-- Logotipo principal de la empresa -->
+
     <a class="brand" href="index.html">
       <img src="assets/img/logo.png" alt="INNOVAX Ingenieros" class="brand-logo" onerror="this.style.display='none';">
       <span class="brand-caption">TECNOLOGÍA Y ELECTRICIDAD</span>
     </a>
 
-    <!-- Botón hamburguesa para la navegación móvil -->
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
-    <!-- Menú de navegación principal con enlaces de ancla -->
-    <nav class="main-av" id="mainNav">
+    <nav class="main-nav" id="mainNav">
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
       <a href="#certificaciones">Certificaciones y Homologaciones</a>
@@ -61,21 +52,19 @@
 
 <main id="inicio">
 
-<!-- ==========================================
-     SECCIÓN HERO / BANNER PRINCIPAL
-     ========================================== -->
 <section class="hero">
-  <!-- Fondo con slider/imagen de presentación -->
   <div class="hero-slider">
+    <div class="slide active" style="background-image:url('assets/img/hero5.jpg')"></div>
+    <div class="slide active" style="background-image:url('assets/img/hero-red3.png')"></div>
+    <div class="slide active" style="background-image:url('assets/img/hero-red2.jpg')"></div>
+    <div class="slide active" style="background-image:url('assets/img/hero4.jpg')"></div>
+    <div class="slide active" style="background-image:url('assets/img/hero6.jpeg')"></div>
     <div class="slide active" style="background-image:url('assets/img/hero-redes.jpg')"></div>
-    <!--<div class="slide" style="background-image:url('assets/img/.jpg')"></div>-->
   </div>
 
-  <!-- Capas de superposición para efectos visuales -->
   <div class="hero-overlay"></div>
   <div class="hero-pattern"></div>
 
-  <!-- Contenido informativo del Hero -->
   <div class="container hero-content">
     <div class="hero-copy reveal-fade-up">
       <div class="eyebrow">
@@ -84,7 +73,6 @@
       <h1>Soluciones que <br><strong>impulsan tu crecimiento.</strong><br></h1>
       <p>Desarrollamos soluciones eléctricas, infraestructura de redes y servicios generales para empresas, industrias y proyectos.</p>
       
-      <!-- Llamados a la acción (CTA) -->
       <div class="hero-actions">
         <a href="#servicios" class="btn btn-primary">Conoce nuestros servicios →</a>
         <a href="#contacto" class="btn btn-outline">Solicitar cotización</a>
@@ -92,7 +80,6 @@
     </div>
   </div>
 
-  <!-- Franja decorativa inferior del Hero -->
   <div class="hero-bottom">
     <div class="hero-bottom-inner">
       <b>INNOVAX INGENIEROS</b> SOLUCIONES PARA TU PROYECTO
@@ -100,12 +87,10 @@
   </div>
 </section>
 
-<!-- ==========================================
-     SECCIÓN NOSOTROS / PRESENTACIÓN CORPORATIVA
-     ========================================== -->
 <section class="section about-section" id="nosotros">
+  <div class="about-bg-image" style="background-image:url('assets/img/fondo.jpeg')"></div>
+  <div class="about-bg-overlay"></div>
   <div class="container about-grid">
-    <!-- Imagen e insignias institucionales -->
     <div class="about-image-wrap reveal-slide-right">
       <img src="assets/img/hero-bg-1.png" alt="INNOVAX Ingenieros">
       <div class="about-badge">
@@ -114,11 +99,13 @@
       </div>
     </div>
 
-    <!-- Descripción y ventajas competitivas -->
     <div class="about-copy reveal-slide-left">
       <span class="section-kicker">NOSOTROS</span>
       <h2>Ingeniería que se convierte en resultados.</h2>
-      <p>En INNOVAX Ingenieros desarrollamos soluciones enfocadas en electricidad, infraestructura de redes y servicios generales.</p>
+      <p>Fundada en 2027, INNOVAX Ingenieros es el resultado de años de visión, perseverancia y un trabajo arduo enfocado en la excelencia. Desde nuestros inicios, 
+        entendimos que el verdadero valor de la ingeniería no está solo en los planos o las estructuras, sino en el impacto positivo que genera en cada cliente.
+        Cada hito alcanzado es fruto del esfuerzo constante de nuestro equipo técnico y de nuestra firme determinación de hacer las cosas bien desde el primer día. 
+        Hoy, seguimos avanzando con la misma energía del primer día, innovando en electricidad, infraestructura de redes y servicios generales.</p>
       <ul>
         <li><b>✓</b> Soluciones adaptadas a cada proyecto.</li>
         <li><b>✓</b> Trabajo ordenado y planificado.</li>
@@ -130,11 +117,6 @@
   </div>
 </section>
 
-
-
-<!-- ==========================================
-     SECCIÓN DE SERVICIOS Y PROYECTOS POR ÁREA
-     ========================================== -->
 <section class="section services-section" id="servicios">
   <div class="container">
     
@@ -147,147 +129,376 @@
 
     <div class="areas-wrapper">
 
-      <!-- ÁREA 1: ELECTRICIDAD -->
       <article class="area-card reveal-card">
-        <div class="area-header">
+        <button type="button" class="area-header">
           <span class="area-number">01</span>
           <div>
             <span class="area-kicker">ESPECIALIDAD</span>
-            <h3 class="area-title">Electricidad</h3>
+            <h3 class="area-title">Servicio Redes y Comunicaciones </h3>
           </div>
-        </div>
+          <span class="area-toggle-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </button>
 
         <p class="area-description">
-          Instalaciones eléctricas, iluminación, tableros, puesta a tierra y soluciones para diferentes tipos de proyectos.
+          Implementación de cableado estructurado, puntos de red, fibra óptica, racks y soluciones de 
+          conectividad para proyectos empresariales.
         </p>
 
         <div class="projects-list-container">
+          <div class="projects-list-inner">
 
-          <!-- Proyecto 1 -->
           <div class="project-item-row">
             <div class="project-info">
-              <span class="project-number">PROYECTO 01</span>
-              <h4>Instalación de Tableros Industriales</h4>
-              <p>Montaje, armado, peinado y normado de tableros de distribución trifásica para sectores comerciales e industriales.</p>
-              <div class="service-tags">
-                <span>Tableros</span>
-                <span>Trifásica</span>
-                <span>Normado</span>
-              </div>
+              <span class="project-number">SERVICIO 01</span>
+              <h4>Instalación de cableado estructurado, categoría 6. 6A  (Voz, Data, video).</h4>
+              <p>La instalación de cableado estructurado en categorías 6 y 6A es el pilar fundamental de la 
+                infraestructura tecnológica de cualquier empresa moderna, ya que unifica los servicios de voz, 
+                datos y video bajo un mismo sistema estandarizado. Invertir en este servicio es crucial porque transforma un 
+                desorden de cables en una plataforma organizada, eficiente, escalable y con una vida útil de 10 a 15 años.</p>
             </div>
             <div class="project-slider">
               <div class="slider-track">
                 <div class="slide active">
-                  <img src="assets/electrico/tablero1.jpeg" alt="Tableros Industriales" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                  <img src="assets/Servicio Redes y Comunicaciones/1.1.jpg" alt="Cableado Estructurado 1" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
                 </div>
                 <div class="slide">
-                  <img src="assets/electrico/luz-emerg2.jpeg" alt="Pruebas de Tablero" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                  <img src="assets/Servicio Redes y Comunicaciones/1.2.jpg" alt="Cableado Estructurado 2" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicio Redes y Comunicaciones/1.3.jpg" alt="Cableado Estructurado 3" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicio Redes y Comunicaciones/1.4.jpg" alt="Cableado Estructurado 4" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
                 </div>
               </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
               <div class="carousel-dots">
-                <span class="dot active" onclick="currentSlide(this, 0)"></span>
-                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
               </div>
             </div>
           </div>
 
-          <!-- Proyecto 2 -->
           <div class="project-item-row">
             <div class="project-info">
-              <span class="project-number">PROYECTO 02</span>
-              <h4>Sistemas de Puesta a Tierra</h4>
-              <p>Medición de resistividad, mantenimiento correctivo y construcción de pozos a tierra con protocolo de pruebas certificado.</p>
-              <div class="service-tags">
-                <span>Pozo a tierra</span>
-                <span>Certificación</span>
-              </div>
+              <span class="project-number">SERVICIO 02</span>
+              <h4>Instalación  de sistema de comunicación de fibra óptica (planta interna).</h4>
+              <p>La instalación de un sistema de comunicación de fibra óptica en planta interna 
+                (Backbone LAN o red interna) es el motor que elimina los cuellos de botella en las empresas, 
+                ya que interconecta los cuartos de comunicaciones principales con los secundarios. Mientras que 
+                el cableado de cobre (Cat 6/6A) lleva el internet a los escritorios de los usuarios, la fibra 
+                óptica es la supercarretera que transporta de forma masiva los datos de toda la organización 
+                hacia los servidores o salidas de internet.</p>
             </div>
             <div class="project-slider">
               <div class="slider-track">
                 <div class="slide active">
-                  <img src="assets/electrico/pozo1.jpeg" alt="Pozo a Tierra" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                  <img src="assets/Servicio Redes y Comunicaciones/2.1.jpg" alt="Pozo a Tierra" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
                 </div>
                 <div class="slide">
-                  <img src="assets/electrico/luz-emerg2.jpeg" alt="Medición de Ohmiaje" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                  <img src="assets/Servicio Redes y Comunicaciones/2.2.jpg" alt="Medición de Ohmiaje" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicio Redes y Comunicaciones/2.3.jpg" alt="Medición de Ohmiaje" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicio Redes y Comunicaciones/2.4.png" alt="Medición de Ohmiaje" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
                 </div>
               </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
               <div class="carousel-dots">
-                <span class="dot active" onclick="currentSlide(this, 0)"></span>
-                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
               </div>
             </div>
           </div>
 
-          <!-- Proyecto 3 -->
           <div class="project-item-row">
             <div class="project-info">
-              <span class="project-number">PROYECTO 03</span>
-              <h4>Iluminación LED Comercial</h4>
-              <p>Diseño e iluminación eficiente para oficinas, almacenes y naves industriales optimizando el consumo energético.</p>
-              <div class="service-tags">
-                <span>Iluminación</span>
-                <span>Eficiencia</span>
-              </div>
+              <span class="project-number">SERVICIO 03</span>
+              <h4>Instalación y configuración de red Wi-Fi.</h4>
+              <p>La instalación y configuración profesional de una red Wi-Fi es el motor de la movilidad, 
+                la productividad y la experiencia del cliente en cualquier empresa moderna. Hoy en día, 
+                el Wi-Fi ya no es un servicio secundario o de "cortesía"; es una infraestructura crítica de 
+                la que dependen laptops, smartphones, tabletas, terminales de pago (POS) y dispositivos inteligentes 
+                (IoT) para operar sin interrupciones.Un despliegue profesional es vital porque diferencia un Wi-Fi doméstico 
+                (que se satura y se cae constantemente) de una red empresarial segura, robusta y con cobertura total.</p>
             </div>
             <div class="project-slider">
               <div class="slider-track">
                 <div class="slide active">
-                  <img src="assets/electrico/luz-emerg2.jpeg" alt="Iluminación LED" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                  <img src="assets/Servicio Redes y Comunicaciones/3.1.jpg" alt="Iluminación LED" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
                 </div>
                 <div class="slide">
-                  <img src="assets/electrico/tablero1.jpeg" alt="Sistemas LED" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                  <img src="assets/Servicio Redes y Comunicaciones/3.2.jpg" alt="Sistemas LED" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
                 </div>
               </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
               <div class="carousel-dots">
-                <span class="dot active" onclick="currentSlide(this, 0)"></span>
-                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
               </div>
             </div>
           </div>
 
+          <div class="project-item-row">
+            <div class="project-info">
+              <span class="project-number">SERVICIO 04</span>
+              <h4>Reordenamiento del cableado del data center y/o gabinetes de empresas.</h4>
+              <p>El reordenamiento del cableado del data center (también conocido como peinado de cables o cable management) 
+                es un servicio crítico para garantizar la continuidad operativa, la seguridad y la eficiencia energética de cualquier empresa. 
+                El centro de datos es el cerebro de la organización; permitir que se convierta en un "tallarín" o maraña de cables invisibiliza fallas, 
+                bloquea la ventilación y eleva exponencialmente el riesgo de apagones informáticos imprevistos.
+                Invertir en este servicio de mantenimiento correctivo y preventivo es vital por las siguientes razones:</p>
+              <p>1. Optimización del Flujo de Aire y Eficiencia Energética (Enfriamiento)</p>
+              <p>2. Reducción Drástica del Tiempo de Inactividad (Downtime)</p>
+              <p>3. Prevención de Desconexiones Accidentales</p>
+              <p>4. Mayor Vida Útil de los Equipos y Cables</p>
+              <p>5. Escalabilidad y Facilidad para Futuras Actualizaciones</p>
+
+            </div>
+            <div class="project-slider">
+              <div class="slider-track">
+                <div class="slide active">
+                  <img src="assets/Servicio Redes y Comunicaciones/4.1.jpg" alt="Pozo a Tierra" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicio Redes y Comunicaciones/4.2.jpg" alt="Medición de Ohmiaje" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicio Redes y Comunicaciones/4.3.jpg" alt="Medición de Ohmiaje" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+              </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item-row">
+            <div class="project-info">
+              <span class="project-number">SERVICIO 05</span>
+              <h4>Instalación y configuración de routers, módems y switchs. </h4>
+              <p>La instalación y configuración profesional de routers, módems y switches es el servicio que da vida, dirección y seguridad a la red informática corporativa.
+                 De nada sirve contar con el cableado estructurado más rápido o el internet más costoso si los equipos que administran el tráfico de datos están mal configurados, 
+                 son domésticos o carecen de reglas de seguridad optimizadas.Invertir en ingenieros certificados para el despliegue de este hardware de red es vital.</p>
+
+            </div>
+            <div class="project-slider">
+              <div class="slider-track">
+                <div class="slide active">
+                  <img src="assets/Servicio Redes y Comunicaciones/5.2.jpg" alt="Pozo a Tierra" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicio Redes y Comunicaciones/5.1.jpg" alt="Medición de Ohmiaje" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicio Redes y Comunicaciones/5.3.jpg" alt="Medición de Ohmiaje" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+              </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item-row">
+            <div class="project-info">
+              <span class="project-number">SERVICIO 06</span>
+              <h4>Implementación de centro de cómputo (Datacenter).</h4>
+              <p>La implementación de un centro de cómputo o Data Center es la inversión más estratégica y crítica para la continuidad de una empresa, 
+                ya que representa el corazón digital del negocio. No se trata simplemente de habilitar una habitación para guardar servidores; es el 
+                diseño y construcción de un entorno blindado, controlado y altamente eficiente encargado de almacenar, procesar y proteger toda la información confidencial, 
+                aplicaciones y sistemas operativos de la organización.Un Data Center empresarial diseñado bajo estándares internacionales es vital porque garantiza que el negocio nunca se detenga, 
+                protegiendo los activos digitales contra fallas eléctricas, incendios, robos y sobrecalentamiento.</p>
+
+            </div>
+            <div class="project-slider">
+              <div class="slider-track">
+                <div class="slide active">
+                  <img src="assets/Servicio Redes y Comunicaciones/6.1.jpg" alt="Pozo a Tierra" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicio Redes y Comunicaciones/6.2.jpg" alt="Medición de Ohmiaje" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+              </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="project-item-row">
+            <div class="project-info">
+              <span class="project-number">SERVICIO 07</span>
+              <h4>Venta de suministros de cómputo.</h4>
+              <p>La venta y provisión estratégica de suministros de cómputo es el servicio que garantiza la continuidad operativa y 
+                la productividad diaria de una empresa al evitar paradas por falta de consumibles o repuestos. Muchas organizaciones subestiman este
+                servicio hasta que la falta de un tóner detiene la firma de un contrato importante, o la falta de un disco duro de repuesto pone en riesgo el almacenamiento de los servidores.
+                Contar con un proveedor corporativo confiable de suministros tecnológicos es fundamental</p>
+
+            </div>
+            <div class="project-slider">
+              <div class="slider-track">
+                <div class="slide active">
+                  <img src="assets/Servicio Redes y Comunicaciones/7.1.jpg" alt="Venta de suministros de cómputo" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="https://http2.mlstatic.com/D_NQ_NP_2X_660935-MLA89115098870_082025-F.webp" alt="Venta de suministros de cómputo" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicio Redes y Comunicaciones/7.2.jpg" alt="Venta de suministros de cómputo" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+              </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item-row">
+            <div class="project-info">
+              <span class="project-number">SERVICIO 08</span>
+              <h4>Mapas de calor para proyectos de WIFI.</h4>
+              <p>La elaboración de mapas de calor para proyectos de Wi-Fi (también conocido como Site Survey inalámbrico) 
+                es el servicio de ingeniería que garantiza el éxito, la cobertura y la rentabilidad de una red inalámbrica antes o
+                después de su instalación. El Wi-Fi es invisible, y diseñar una red "al ojo" o por intuición suele resultar en zonas sin señal, interferencias destructivas y un enorme desperdicio de dinero en equipos mal ubicados.
+                Un mapa de calor utiliza software de simulación profesional para visibilizar matemáticamente la propagación de las ondas de radiofrecuencia (en 2.4 GHz, 5 GHz y 6 GHz) sobre los planos reales de una infraestructura.</p>
+
+            </div>
+            <div class="project-slider">
+              <div class="slider-track">
+                <div class="slide active">
+                  <img src="assets/Servicio Redes y Comunicaciones/8.1.png" alt="Pozo a Tierra" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicio Redes y Comunicaciones/8.2.png" alt="Medición de Ohmiaje" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicio Redes y Comunicaciones/8.3.png" alt="Medición de Ohmiaje" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicio Redes y Comunicaciones/8.4.png" alt="Medición de Ohmiaje" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicio Redes y Comunicaciones/8.5.png" alt="Medición de Ohmiaje" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicio Redes y Comunicaciones/8.6.png" alt="Medición de Ohmiaje" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+              </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 9 -->
+          <div class="project-item-row">
+            <div class="project-info">
+              <span class="project-number">SERVICIO 09</span>
+              <h4>Soporte técnico en el mantenimiento de equipos de cómputo.</h4>
+              <p>El soporte técnico en el mantenimiento de equipos de cómputo es el servicio crítico que protege los activos tecnológicos de una empresa, 
+                garantizando que la operación diaria nunca se detenga por fallas técnicas. Las computadoras, laptops y servidores son las herramientas de trabajo
+                fundamentales de los colaboradores; permitir que operen sin mantenimiento adecuado genera lentitud, pérdida de datos y costosas reparaciones de emergencia.</p>
+
+            </div>
+            <div class="project-slider">
+              <div class="slider-track">
+                <div class="slide active">
+                  <img src="assets/Servicio Redes y Comunicaciones/9.1.jpg" alt="Pozo a Tierra" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicio Redes y Comunicaciones/9.2.jpg" alt="Medición de Ohmiaje" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicio Redes y Comunicaciones/9.3.jpg" alt="Medición de Ohmiaje" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+              </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+          
+
+          </div>
         </div>
       </article>
 
-      <!-- ÁREA 2: REDES Y TELECOMUNICACIONES -->
+      <!-- ÁREA 2: SEGURIDAD ELECTRÓNICA -->
       <article class="area-card reveal-card">
-        <div class="area-header">
+        <button type="button" class="area-header">
           <span class="area-number">02</span>
           <div>
             <span class="area-kicker">ESPECIALIDAD</span>
-            <h3 class="area-title">Redes y Conectividad</h3>
+            <h3 class="area-title">Seguridad Electrónica</h3>
           </div>
-        </div>
+          <span class="area-toggle-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </button>
 
         <p class="area-description">
-          Cableado estructurado, puntos de red, fibra óptica, racks y organización de infraestructura tecnológica.
+          Instalación y mantenimiento de sistemas de videovigilancia, cámaras de seguridad, control de acceso y soluciones de seguridad electrónica.
         </p>
 
         <div class="projects-list-container">
+          <div class="projects-list-inner">
 
           <!-- Proyecto 1 -->
           <div class="project-item-row">
             <div class="project-info">
-              <span class="project-number">PROYECTO 01</span>
-              <h4>Implementación de Racks de Datos</h4>
-              <p>Organización integral, peinado de cables de red y parcheo de paneles Cat6A en Data Centers y salas de control.</p>
-              <div class="service-tags">
-                <span>Racks</span>
-                <span>Cat6A</span>
-                <span>Ordenamiento</span>
-              </div>
+              <span class="project-number">SERVICIO 01</span>
+              <h4>Instalación de Sistemas de Circuito Cerrado de Televisión(CCTV), CÁMARAS IP PoE.</h4>
+              <p>La instalación de un sistema de Circuito Cerrado de Televisión (CCTV) con cámaras IP PoE (Power over Ethernet) 
+                 es la solución de seguridad más avanzada y eficiente para proteger los activos, el personal y la información de una empresa. A diferencia de los sistemas analógicos antiguos, 
+                 la tecnología IP PoE combina video de alta definición, analítica inteligente y energía eléctrica a través de un solo cable de red, transformando la seguridad reactiva en prevención proactiva.</p>
             </div>
             <div class="project-slider">
               <div class="slider-track">
                 <div class="slide active">
-                  <img src="assets/red/red4.jpeg" alt="Racks de Datos" onerror="this.onerror=null; this.src='assets/img/hero-redes.jpg';">
+                  <img src="assets/Seguridad Electrónica/1.1.jpg" alt="Televisión(CCTV), CÁMARAS IP PoE" onerror="this.onerror=null; this.src='assets/img/hero-redes.jpg';">
                 </div>
                 <div class="slide">
-                  <img src="assets/red/red2.jpeg" alt="Peinado de Cables" onerror="this.onerror=null; this.src='assets/img/hero-redes.jpg';">
+                  <img src="assets/Seguridad Electrónica/1.2.jpg" alt="Televisión(CCTV), CÁMARAS IP PoE" onerror="this.onerror=null; this.src='assets/img/hero-redes.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Seguridad Electrónica/1.3.jpg" alt="Televisión(CCTV), CÁMARAS IP PoE" onerror="this.onerror=null; this.src='assets/img/hero-redes.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Seguridad Electrónica/1.4.jpg" alt="Televisión(CCTV), CÁMARAS IP PoE" onerror="this.onerror=null; this.src='assets/img/hero-redes.jpg';">
                 </div>
               </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
               <div class="carousel-dots">
-                <span class="dot active" onclick="currentSlide(this, 0)"></span>
-                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
               </div>
             </div>
           </div>
@@ -295,26 +506,36 @@
           <!-- Proyecto 2 -->
           <div class="project-item-row">
             <div class="project-info">
-              <span class="project-number">PROYECTO 02</span>
-              <h4>Tendidos de Fibra Óptica</h4>
-              <p>Instalación de enlaces de fibra óptica monomodo/multimodo, fusiones de precisión y certificación OTDR.</p>
-              <div class="service-tags">
-                <span>Fibra Óptica</span>
-                <span>Fusiones</span>
-              </div>
+              <span class="project-number">SERVICIO 02</span>
+              <h4>Instalación de Sistemas contra Incendios (Centrales de alarma).</h4>
+              <p>La instalación de sistemas contra incendios y centrales de alarma es el servicio de seguridad electrónica 
+                 más crítico para una empresa, ya que su objetivo principal es salvar vidas humanas y proteger el patrimonio de la organización ante un siniestro. 
+                 A diferencia de otros sistemas de seguridad, un sistema de detección de incendios está normado por leyes estrictas, 
+                 debido a que unos pocos segundos de retraso pueden marcar la diferencia entre un susto menor y una tragedia total.Este servicio es de 
+                 vital importancia por las siguientes razones técnicas, legales y de continuidad de negocio:</p>
+                 <p>1.	Detección Temprana y Alerta Evacuación Inmediata</p>
+                 <p>2.	Cumplimiento Legal y Licencias de Funcionamiento</p>
+                 <p>3.	Integración y Automatización con Otros Sistemas del Edificio</p>
+                 <p>4.	Continuidad del Negocio y Protección de Activos Críticos</p>
+                 <p>5.	Reducción en las Primas de Seguros Corporativos</p>
             </div>
             <div class="project-slider">
               <div class="slider-track">
                 <div class="slide active">
-                  <img src="assets/red/red3.jpeg" alt="Fibra Óptica" onerror="this.onerror=null; this.src='assets/img/hero-redes.jpg';">
+                  <img src="assets/Seguridad Electrónica/2.3.jpg" alt="Sistemas contra Incendios" onerror="this.onerror=null; this.src='assets/img/hero-redes.jpg';">
                 </div>
                 <div class="slide">
-                  <img src="assets/red/red4.jpeg" alt="Certificación" onerror="this.onerror=null; this.src='assets/img/hero-redes.jpg';">
+                  <img src="assets/Seguridad Electrónica/2.1.jpg" alt="Sistemas contra Incendios" onerror="this.onerror=null; this.src='assets/img/hero-redes.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Seguridad Electrónica/2.2.jpg" alt="Sistemas contra Incendios" onerror="this.onerror=null; this.src='assets/img/hero-redes.jpg';">
                 </div>
               </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
               <div class="carousel-dots">
-                <span class="dot active" onclick="currentSlide(this, 0)"></span>
-                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
               </div>
             </div>
           </div>
@@ -322,72 +543,83 @@
           <!-- Proyecto 3 -->
           <div class="project-item-row">
             <div class="project-info">
-              <span class="project-number">PROYECTO 03</span>
-              <h4>Puntos de Red Corporativos</h4>
-              <p>Habilitación de puntos dobles de datos y voz etiquetados para puestos de trabajo en oficinas administrativas.</p>
-              <div class="service-tags">
-                <span>Cableado</span>
-                <span>Puntos de Red</span>
-              </div>
+              <span class="project-number">SERVICIO 03</span>
+              <h4>Instalación de cercos perimétricos eléctricos.</h4>
+              <p>La instalación de cercos perimétricos eléctricos es la primera y más potente línea de defensa física y psicológica para resguardar 
+                los límites de una empresa, almacén o propiedad. A diferencia de otros sistemas de seguridad que alertan cuando el intruso ya está dentro del establecimiento, 
+                el cerco eléctrico actúa en el perímetro exterior, evitando la intrusión antes de que ocurra.</p>
             </div>
             <div class="project-slider">
               <div class="slider-track">
                 <div class="slide active">
-                  <img src="assets/red/red2.jpeg" alt="Cableado Estructurado" onerror="this.onerror=null; this.src='assets/img/hero-redes.jpg';">
+                  <img src="assets/Seguridad Electrónica/3.1.jpg" alt="Cercos Perimétricos Eléctricos" onerror="this.onerror=null; this.src='assets/img/hero-redes.jpg';">
                 </div>
                 <div class="slide">
-                  <img src="assets/red/red3.jpeg" alt="Puntos de Red" onerror="this.onerror=null; this.src='assets/img/hero-redes.jpg';">
+                  <img src="assets/Seguridad Electrónica/3.2.jpg" alt="Cercos Perimétricos Eléctricos" onerror="this.onerror=null; this.src='assets/img/hero-redes.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Seguridad Electrónica/3.3.jpg" alt="Cercos Perimétricos Eléctricos" onerror="this.onerror=null; this.src='assets/img/hero-redes.jpg';">
                 </div>
               </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
               <div class="carousel-dots">
-                <span class="dot active" onclick="currentSlide(this, 0)"></span>
-                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
               </div>
             </div>
           </div>
 
+          </div>
         </div>
       </article>
 
-      <!-- ÁREA 3: SERVICIOS GENERALES -->
+      <!-- ÁREA 3: SERVICIOS DE AIRE ACONDICIONADO -->
       <article class="area-card reveal-card">
-        <div class="area-header">
+        <button type="button" class="area-header">
           <span class="area-number">03</span>
           <div>
             <span class="area-kicker">ESPECIALIDAD</span>
-            <h3 class="area-title">Servicios Generales</h3>
+            <h3 class="area-title">Servicios de Aire Acondicionado</h3>
           </div>
-        </div>
+          <span class="area-toggle-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </button>
 
         <p class="area-description">
-          Mantenimiento, adecuaciones, trabajos complementarios y soluciones generales para mantener tus instalaciones operativas.
+          Instalación, mantenimiento y adecuación de sistemas de aire acondicionado para oficinas, ambientes comerciales e instalaciones industriales.
         </p>
 
         <div class="projects-list-container">
+          <div class="projects-list-inner">
 
           <!-- Proyecto 1 -->
           <div class="project-item-row">
             <div class="project-info">
-              <span class="project-number">PROYECTO 01</span>
-              <h4>Mantenimiento Preventivo de Locales</h4>
-              <p>Revisión continua de infraestructuras corporativas, acabados y pintura técnica industrial.</p>
-              <div class="service-tags">
-                <span>Mantenimiento</span>
-                <span>Pintura</span>
-              </div>
+              <span class="project-number">SERVICIO 01</span>
+              <h4>Instalación y mantenimiento de Equipos de aire acondicionado.</h4>
+              <p>La instalación y mantenimiento profesional de equipos de aire acondicionado es un servicio crítico 
+                para garantizar la productividad, la salud de las personas y la longevidad del hardware tecnológico dentro de una empresa. 
+                Un sistema de climatización no se limita a "enfriar el ambiente"; se encarga de regular la temperatura, controlar la humedad y filtrar la pureza del aire que respiran los colaboradores y clientes, operando continuamente como un pulmón mecánico para la infraestructura corporativa.</p>
             </div>
             <div class="project-slider">
               <div class="slider-track">
                 <div class="slide active">
-                  <img src="assets/servgen/gen1.jpeg" alt="Mantenimiento Preventivo" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                  <img src="assets/Servicios de Aire Acondicionado/1.1.jpg" alt="Equipos de aire acondicionado" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
                 </div>
                 <div class="slide">
-                  <img src="assets/servgen/gen3.jpeg" alt="Pintura Industrial" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                  <img src="assets/Servicios de Aire Acondicionado/1.2.jpg" alt="Equipos de aire acondicionado" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios de Aire Acondicionado/1.3.jpg" alt="Equipos de aire acondicionado" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
                 </div>
               </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
               <div class="carousel-dots">
-                <span class="dot active" onclick="currentSlide(this, 0)"></span>
-                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
               </div>
             </div>
           </div>
@@ -395,30 +627,478 @@
           <!-- Proyecto 2 -->
           <div class="project-item-row">
             <div class="project-info">
-              <span class="project-number">PROYECTO 02</span>
-              <h4>Adecuación de Espacios de Trabajo</h4>
-              <p>Remodelaciones de ambientes, instalación de tabiquería en drywall, cielo raso y divisiones modulares.</p>
-              <div class="service-tags">
-                <span>Adecuaciones</span>
-                <span>Drywall</span>
-              </div>
+              <span class="project-number">SERVICIO 02</span>
+              <h4>Instalación y mantenimiento de AA para data center.</h4>
+              <p>La instalación y mantenimiento de equipos de aire acondicionado para un Data Center 
+                (conocido como Aire Acondicionado de Precisión) es un servicio de ingeniería de alta criticidad, diseñado exclusivamente para proteger 
+                los servidores y garantizar que los sistemas de la empresa nunca se detengan por sobrecalentamiento.A diferencia del aire acondicionado comercial o residencial (confort), 
+                que solo enfría el ambiente de forma intermitente, los equipos de precisión operan las 24 horas, los 365 días del año, controlando la temperatura y la humedad con márgenes de error milimétricos.</p>
             </div>
             <div class="project-slider">
               <div class="slider-track">
                 <div class="slide active">
-                  <img src="assets/servgen/gen2.jpeg" alt="Adecuación de Oficinas" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                  <img src="assets/Servicios de Aire Acondicionado/2.1.jpg" alt="AA para data center" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
                 </div>
                 <div class="slide">
-                  <img src="assets/servgen/gen1.jpeg" alt="Remodelación" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                  <img src="assets/Servicios de Aire Acondicionado/2.2.jpg" alt="AA para data center" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
                 </div>
               </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
               <div class="carousel-dots">
-                <span class="dot active" onclick="currentSlide(this, 0)"></span>
-                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
               </div>
             </div>
           </div>
 
+          </div>
+        </div>
+      </article>
+
+            <!-- ÁREA 4: SERVICIOS ELÉCTRICOS -->
+      <article class="area-card reveal-card">
+        <button type="button" class="area-header">
+          <span class="area-number">04</span>
+          <div>
+            <span class="area-kicker">ESPECIALIDAD</span>
+            <h3 class="area-title">Servicios Eléctricos</h3>
+          </div>
+          <span class="area-toggle-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </button>
+
+        <p class="area-description">
+          Instalaciones eléctricas, mantenimiento, tableros eléctricos, iluminación, puesta a tierra y soluciones eléctricas para diferentes tipos de proyectos.
+        </p>
+
+        <div class="projects-list-container">
+          <div class="projects-list-inner">
+
+          <!-- Proyecto 1 -->
+          <div class="project-item-row">
+            <div class="project-info">
+              <span class="project-number">SERVICIO 01</span>
+              <h4>Auditoría de sistemas eléctricos.</h4>
+              <p>La auditoría de sistemas eléctricos es el servicio de inspección, diagnóstico y análisis técnico más profundo que se le realiza a 
+                la infraestructura eléctrica de una empresa para evaluar su nivel de seguridad, eficiencia y cumplimiento normativo. Su objetivo es identificar fallas ocultas, 
+                "vampiros" de energía, puntos calientes y riesgos de electrocución o incendio antes de que provoquen un colapso operativo o una tragedia.Invertir en una auditoría eléctrica profesional 
+                es de vital importancia por las siguientes razones estratégicas:</p>
+                <p>1.	Prevención Eficaz de Incendios y Accidentes Mortales</p>
+                <p>2.	Ahorro Económico Directo (Eliminación de Fugas y Multas)</p>
+                <p>3.	Diagnóstico de la Calidad de Energía para Equipos TI</p>
+                <p>4.	Aprobación de Inspecciones Técnicas (Defensa Civil - ITSE)</p>
+            </div>
+            <div class="project-slider">
+              <div class="slider-track">
+                <div class="slide active">
+                  <img src="assets/Servicios Eléctricos/1.1.jpg" alt="Sistemas Eléctricos" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/1.2.jpg" alt="Sistemas Eléctricos" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/1.3.jpg" alt="Sistemas Eléctricos" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+              </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 2 -->
+          <div class="project-item-row">
+            <div class="project-info">
+              <span class="project-number">SERVICIO 02</span>
+              <h4>Instalación y mantenimiento de tablero eléctrico.</h4>
+              <p>La instalación y mantenimiento de tableros eléctricos es el servicio medular de seguridad y control energético en cualquier 
+                infraestructura, ya que el tablero funciona como el "cerebro eléctrico" que distribuye, protege y organiza la energía de toda la empresa. 
+                Desde alimentar las computadoras de la oficina hasta sostener los servidores críticos de un Data Center, un tablero en óptimas condiciones garantiza 
+                que la energía fluya de forma segura y eficiente.Invertir en ingenieros y técnicos certificados para este servicio es de vital importancia por las siguientes razones:</p>
+                <p>1.	Prevención de Incendios y Cortocircuitos (Seguridad Humana y Patrimonial)</p>
+                <p>2.	Protección de Equipos Tecnológicos y Sensibles</p>
+                <p>3.	Continuidad del Negocio y Cero Paradas Inesperadas</p>
+                <p>4.	Cumplimiento de Normativas Legales e Inspecciones (Defensa Civil)</p>
+                <p>5.	Eficiencia Energética y Balanceo de Cargas</p>
+            </div>
+            <div class="project-slider">
+              <div class="slider-track">
+                <div class="slide active">
+                  <img src="assets/Servicios Eléctricos/2.1.jpg" alt="Tablero Eléctrico" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/2.2.jpg" alt="Tablero Eléctrico" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/2.3.jpg" alt="Tablero Eléctrico" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+              </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+           <!-- Proyecto 3 -->
+          <div class="project-item-row">
+            <div class="project-info">
+              <span class="project-number">SERVICIO 03</span>
+              <h4>Instalaciones y mantenimiento de pararayos.</h4>
+              <p>La instalación y mantenimiento de pararrayos (Sistemas de Protección contra el Rayo - SPCR) es el servicio de seguridad de 
+                ingeniería definitivo para proteger la integridad estructural de un edificio, salvaguardar vidas humanas y blindar los costosos 
+                activos tecnológicos contra impactos directos de descargas atmosféricas. Un rayo transporta de forma instantánea millones de voltios y hasta 200,000 amperios de corriente; 
+                sin un canal de escape controlado, esa fuerza puede demoler estructuras, iniciar incendios masivos o fundir redes completas de datos en milisegundos</p>
+            </div>
+            <div class="project-slider">
+              <div class="slider-track">
+                <div class="slide active">
+                  <img src="assets/Servicios Eléctricos/3.1.jpg" alt="Pararayos" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/3.2.jpg" alt="Pararayos" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/3.3.jpg" alt="Pararayos" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+              </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 4 -->
+          <div class="project-item-row">
+
+            <div class="project-info">
+              <span class="project-number">SERVICIO 04</span>
+              <h4>Instalación y mantenimiento de pozos a tierra.</h4>
+              <p>La instalación y mantenimiento de pozos a tierra es el servicio de seguridad eléctrica más crítico para proteger la vida de tus colaboradores, 
+                 blindar tus servidores y cumplir con las leyes de seguridad en el trabajo. Un pozo a tierra (o puesta a tierra) funciona como una vía de escape segura: 
+                 desvía instantáneamente cualquier fuga de corriente peligrosa o sobrevoltaje directamente hacia el suelo, evitando cortocircuitos y electrocuciones. 
+                 Invertir en este servicio técnico especializado es de vital importancia por las siguientes razones de negocio y protección:</p>
+                 <p>1.	Protección de Vidas Humanas (Seguridad de los Trabajadores)</p>
+                 <p>2.	Blindaje Absoluto de Servidores, Equipos TI y Electrónicos</p>
+                 <p>3.	Requisito Legal Obligatorio (Defensa Civil - ITSE)</p>
+                 <p>4.	Funcionamiento Correcto de las Llaves Diferenciales</p>
+            </div>
+            <div class="project-slider">
+              <div class="slider-track">
+                <div class="slide active">
+                  <img src="assets/Servicios Eléctricos/4.3.jpg" alt="Pozos a Tierra" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/4.2.jpg" alt="Pozos a Tierra" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/4.1.jpg" alt="Pozos a Tierra" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/4.4.jpg" alt="Pozos a Tierra" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/4.5.jpg" alt="Pozos a Tierra" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/4.6.jpg" alt="Pozos a Tierra" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+              </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 5 -->
+          <div class="project-item-row">
+
+            <div class="project-info">
+              <span class="project-number">SERVICIO 05</span>
+              <h4>Instalaciones y mantenimiento de grupos electrógenos, UPS, transformador y estabilizadores.</h4>
+              <p>La instalación y mantenimiento de grupos electrógenos, UPS, transformadores y estabilizadores es 
+                el servicio de ingeniería eléctrica definitivo para garantizar la continuidad del negocio y el blindaje energético de una empresa. 
+                Estos cuatro equipos forman el sistema de respaldo y calidad de energía de una organización corporativa o industrial; si uno de ellos falla o no recibe mantenimiento, 
+                la empresa queda vulnerable a apagones informáticos, pérdida de datos masiva y la destrucción instantánea de la infraestructura tecnológica (como el Data Center). 
+                Invertir en soporte técnico especializado para estos activos es de vital importancia por las siguientes razones:</p>
+                 <p>1.	Garantía de Continuidad del Negocio (Cero Paradas Operativas)</p>
+                 <p>2.	Protección Absoluta contra Anomalías Eléctricas de la Red Pública</p>
+                 <p>3.	Mitigación de Costos por Mantenimiento Preventivo y Diagnóstico Proactivo</p>
+            </div>
+            <div class="project-slider">
+              <div class="slider-track">
+                <div class="slide active">
+                  <img src="assets/Servicios Eléctricos/5.1.jpg" alt="Grupos electrógenos, UPS, transformador y estabilizadores" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/5.2.jpg" alt="Grupos electrógenos, UPS, transformador y estabilizadores" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/5.3.jpg" alt="Grupos electrógenos, UPS, transformador y estabilizadores" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+              </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 6 -->
+          <div class="project-item-row">
+
+            <div class="project-info">
+              <span class="project-number">SERVICIO 06</span>
+              <h4>Instalación y mantenimiento de electrobombas de agua.</h4>
+              <p>La instalación y mantenimiento de electrobombas de agua es el servicio 
+                crítico que garantiza el suministro ininterrumpido de agua en cualquier edificación corporativa, 
+                comercial o residencial. Las electrobombas son los motores encargados de vencer la gravedad para llevar 
+                el agua desde las cisternas subterráneas hacia los tanques elevados, redes de producción o sistemas de presión constante. 
+                Permitir que estos equipos fallen por falta de mantenimiento puede dejar a una empresa, hotel, centro médico o condominio completamente 
+                desabastecido de agua en cuestión de horas, deteniendo las operaciones por completo.</p>
+            </div>
+            <div class="project-slider">
+              <div class="slider-track">
+                <div class="slide active">
+                  <img src="assets/Servicios Eléctricos/6.1.jpg" alt="Electrobombas de Agua" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/6.2.jpg" alt="Electrobombas de Agua" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/6.3.jpg" alt="Electrobombas de Agua" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+              </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 7 -->
+          <div class="project-item-row">
+
+            <div class="project-info">
+              <span class="project-number">SERVICIO 07</span>
+              <h4>Sistema de iluminación interior y exterior de luminarias y luces de emergencia.</h4>
+              <p>La instalación y mantenimiento del sistema de iluminación interior, exterior y 
+                luces de emergencia es el servicio clave para garantizar la operatividad comercial, 
+                el confort visual, la eficiencia energética y la seguridad de evacuación en cualquier empresa. 
+                La iluminación no es un gasto estético; influye directamente en el rendimiento de los trabajadores, 
+                la atracción de clientes en fachadas y es la última línea de defensa para evacuar un edificio a salvo durante un sismo o apagón.</p>
+            </div>
+            <div class="project-slider">
+              <div class="slider-track">
+                <div class="slide active">
+                  <img src="assets/Servicios Eléctricos/7.1.jpg" alt="Luces de Emergencia" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/7.2.jpg" alt="Luces de Emergencia" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/7.3.jpg" alt="Luces de Emergencia" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/7.4.jpg" alt="Luces de Emergencia" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/7.5.jpg" alt="Luces de Emergencia" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+              </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 8 -->
+          <div class="project-item-row">
+
+            <div class="project-info">
+              <span class="project-number">SERVICIO 08</span>
+              <h4>Diseño de infraestructura Eléctrica.</h4>
+              <p>La infraestructura eléctrica es la columna vertebral y el cimiento tecnológico 
+                de cualquier empresa u organización. Consiste en el diseño, canalización, 
+                protección y distribución de la energía desde el punto de suministro de la red pública 
+                hasta el último dispositivo conectado (servidores, computadoras, maquinaria o luminarias). 
+                De nada sirve contar con los equipos tecnológicos más avanzados o el software más costoso si la red 
+                eléctrica que los alimenta es inestable, obsoleta o insegura.Invertir en el diseño, instalación y mantenimiento 
+                profesional de la infraestructura eléctrica es de vital importancia por las siguientes razones de negocio y seguridad:</p>
+                <p>1.	Garantía de Continuidad y Cero Paradas de Operación (Downtime)</p>
+                <p>2.	Protección Absoluta de Activos Tecnológicos y Sensibles</p>
+                <p>3.	Reducción de Costos y Máxima Eficiencia Energética</p>
+                <p>4.	Cumplimiento Normativo Obligatorio (Defensa Civil - ITSE)</p>
+                <p>5.	Escalabilidad y Flexibilidad para el Crecimiento del Negocio</p>
+            </div>
+            <div class="project-slider">
+              <div class="slider-track">
+                <div class="slide active">
+                  <img src="assets/Servicios Eléctricos/8.1.jpg" alt="Infraestructura Eléctrica" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/8.2.jpg" alt="Infraestructura Eléctrica" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+              </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 9 -->
+          <div class="project-item-row">
+
+            <div class="project-info">
+              <span class="project-number">SERVICIO 09</span>
+              <h4>Estudio de iluminación y estudio para el ahorro de energía.</h4>
+              <p>El estudio de iluminación y ahorro de energía es el servicio técnico de ingeniería que 
+                fusiona la ergonomía visual con la eficiencia económica para optimizar el consumo de luz en una empresa. 
+                Su objetivo primordial es diseñar un entorno donde los colaboradores trabajen con la máxima comodidad visual y nitidez, 
+                mientras se reduce la facturación mensual de electricidad mediante el uso de tecnologías de vanguardia y automatización. 
+                Dejar la iluminación de una oficina, almacén o planta industrial sin un estudio técnico equivale a pagar de más en el 
+                recibo de luz por una iluminación deficiente que causa fatiga laboral y multas normativas. Este servicio unificado es de vital 
+                importancia por las siguientes razones de negocio, salud y sostenibilidad:</p>
+                <p>1.	Reducción Drástica de Costos Operativos (Ahorro de hasta un 75%)</p>
+                <p>2.	Automatización Inteligente del Sistema (Iluminación Bajo Demanda)</p>
+                <p>3.	Incremento de la Productividad y Salud Ocupacional (Ergonomía Lumínica)</p>
+                <p>4.	Cumplimiento estricto de Normativas y Defensa Civil (ITSE)</p>
+                <p>5.	Reducción de la Carga Térmica en el Edificio</p>
+            </div>
+            <div class="project-slider">
+              <div class="slider-track">
+                <div class="slide active">
+                  <img src="assets/Servicios Eléctricos/9.1.jpg" alt="Estudio de iluminación" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="https://ivoryarquitectura.com/wp-content/uploads/2018/09/Disegno-oficinas-Ivory-diego-de-leon-05-1024x682.jpg" alt="Estudio de iluminación" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+              </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 10 -->
+          <div class="project-item-row">
+
+            <div class="project-info">
+              <span class="project-number">SERVICIO 10</span>
+              <h4>Levantamiento de las observaciones de Defensa Civil (Incluye certificado de operatividad).</h4>
+              <p>El levantamiento de las observaciones de Defensa Civil (ITSE) es el servicio de ingeniería 
+                correctiva y legal definitivo para evitar la clausura de tu negocio, eliminar multas y garantizar la 
+                seguridad total de tus instalaciones. Pasar por una Inspección Técnica de Seguridad en Edificaciones (ITSE) 
+                puede ser un proceso complejo si los inspectores encuentran deficiencias en la infraestructura. Este servicio 
+                se encarga de subsanar cada una de las faltas halladas y emitir los Certificados de Operatividad firmados por 
+                ingenieros colegiados, asegurando la obtención o renovación de tu Licencia de Funcionamiento.</p>
+            </div>
+            <div class="project-slider">
+              <div class="slider-track">
+                <div class="slide active">
+                  <img src="Servicios Eléctricos/10.2.jpg" alt="Defensa Civil (ITSE)" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Servicios Eléctricos/10.1.jpg" alt="Defensa Civil (ITSE)" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="https://www.wesler.com.pe/wp-content/uploads/2025/02/6-importancia-1-1.png" alt="Defensa Civil (ITSE)" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div
+              </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </article>
+
+            <!-- ÁREA 5: OTROS SERVICIOS -->
+      <article class="area-card reveal-card">
+        <button type="button" class="area-header">
+          <span class="area-number">05</span>
+          <div>
+            <span class="area-kicker">ESPECIALIDAD</span>
+            <h3 class="area-title">Otros Servicios</h3>
+          </div>
+          <span class="area-toggle-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+        </button>
+
+        <p class="area-description">
+          Servicios técnicos complementarios, mantenimiento y adecuaciones para atender requerimientos específicos de infraestructura y proyectos.
+        </p>
+
+        <div class="projects-list-container">
+          <div class="projects-list-inner">
+
+          <!-- Proyecto 1 -->
+          <div class="project-item-row">
+            <div class="project-info">
+              <span class="project-number">SERVICIOS</span>
+              <h4>Servicios Generales</h4>
+              <p>1.	Trabajos de soldadura en general.</p>
+              <p>2.	Trabajos con drywall.</p>
+              <p>3.	Mantenimiento y pintado de edificaciones y estructuras. </p>
+              <p>4.	Mantenimiento de mobiliario.</p>
+            </div>
+            <div class="project-slider">
+              <div class="slider-track">
+                <div class="slide active">
+                  <img src="assets/Otros Servicios/1.1.jpg" alt="Mantenimiento Preventivo" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="https://www.gyplac.com/siteassets/co/construye-tu-proyecto-en-48-horas-gyplac.jpeg?v=4a5e90&width=1200&height=750&rmode=Crop" alt="Pintura Industrial" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="https://verticalsolution.pe/wp-content/uploads/2024/04/pintado-de-fachadas-en-edificios.jpg" alt="Mantenimiento Preventivo" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+                <div class="slide">
+                  <img src="assets/Otros Servicios/1.2.jpg" alt="Mantenimiento Preventivo" onerror="this.onerror=null; this.src='assets/img/hero-bg-1.jpg';">
+                </div>
+              </div>
+              <button class="slider-arrow prev" type="button" aria-label="Anterior">&#8249;</button>
+              <button class="slider-arrow next" type="button" aria-label="Siguiente">&#8250;</button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+          </div>
         </div>
       </article>
 
@@ -426,31 +1106,64 @@
   </div>
 </section>
 
-<!-- Script sencillo para el carrusel de imágenes -->
+<!-- Script del carrusel de imágenes: flechas + autoplay en bucle infinito -->
 <script>
-  function currentSlide(dotElement, index) {
-    const sliderContainer = dotElement.closest('.project-slider');
-    const slides = sliderContainer.querySelectorAll('.slide');
-    const dots = sliderContainer.querySelectorAll('.dot');
+  function initProjectSliders() {
+    document.querySelectorAll('.project-slider').forEach(function (slider) {
+      const slides = slider.querySelectorAll('.slide');
+      const dots = slider.querySelectorAll('.dot');
+      if (!slides.length) return;
+      let index = 0;
+      let timer = null;
 
-    slides.forEach((slide, i) => {
-      slide.classList.remove('active');
-      dots[i].classList.remove('active');
-      if (i === index) {
-        slide.classList.add('active');
-        dots[i].classList.add('active');
+      function show(i) {
+        index = (i + slides.length) % slides.length;
+        slides.forEach(function (s, n) { s.classList.toggle('active', n === index); });
+        dots.forEach(function (d, n) { d.classList.toggle('active', n === index); });
       }
+
+      function restartAutoplay() {
+        if (timer) clearInterval(timer);
+        if (slides.length > 1) {
+          timer = setInterval(function () { show(index + 1); }, 4000);
+        }
+      }
+
+      slider.querySelectorAll('.slider-arrow.prev').forEach(function (btn) {
+        btn.addEventListener('click', function () { show(index - 1); restartAutoplay(); });
+      });
+      slider.querySelectorAll('.slider-arrow.next').forEach(function (btn) {
+        btn.addEventListener('click', function () { show(index + 1); restartAutoplay(); });
+      });
+      dots.forEach(function (dot, n) {
+        dot.addEventListener('click', function () { show(n); restartAutoplay(); });
+      });
+
+      restartAutoplay();
     });
   }
+
+  function initHeroSlider() {
+    const slides = document.querySelectorAll('.hero-slider .slide');
+    if (slides.length < 2) return;
+    let index = 0;
+    setInterval(function () {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 5000);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    initProjectSliders();
+    initHeroSlider();
+  });
 </script>
-
-
 
 <!-- ==========================================
      SECCIÓN CERTIFICACIONES Y HOMOLOGACIONES
      ========================================== -->
 <section class="section certs-showcase-v2" id="certificaciones">
-  <!-- Video de fondo con efecto superpuesto -->
   <video class="cert-bg-video" autoplay loop muted playsinline>
     <source src="assets/video/videof.mp4" type="video/mp4">
   </video>
@@ -467,7 +1180,6 @@
       <p>Acreditaciones oficiales e inspecciones que certifican nuestra calidad, cumplimiento normativo y seguridad industrial.</p>
     </div>
 
-    <!-- Muestra interactiva de certificaciones obtenidas -->
     <div class="certs-grid-v2">
 
       <!-- Certificado 01: MEGA -->
@@ -497,8 +1209,8 @@
         </div>
       </div>
 
-      <!-- Certificado 02: SGS Yura -->
-      <div class="cert-card-v2 reveal-card" data-delay="250" onclick="openCertModal('assets/img/cert2.jpg', 'Homologación de Proveedores SGS', 'Solicitado por Yura S.A. (Grupo Gloria) | Calificación: Muy Bueno (92.36%)', 'Verificación de capacidad operativa, financiera, comercial y cumplimiento de sistemas de SST e ISO.')">
+      <!-- Certificado 02: Hodelpe S.A.C. -->
+      <div class="cert-card-v2 reveal-card" data-delay="250" onclick="openCertModal('assets/img/cert2.jpg', 'Certificado de Homologación de Proveedores', 'Solicitado por ON EMPRESAS S.A.C. | Calificación: Muy Bueno (92%)', 'Evaluación y calificación de capacidades técnicas, comerciales, legales, financieras y de cumplimiento en el proceso de homologación de proveedores.')">
         <div class="cert-ribbon"><span>ACREDITADO</span></div>
         <div class="cert-preview-box">
           <div class="cert-badge-floating" title="Certificación Oficial Verificada">
@@ -512,11 +1224,11 @@
         </div>
         <div class="cert-body-v2">
           <div class="cert-tags-v2">
-            <span class="tag-red">SGS / YURA S.A.</span>
-            <span class="tag-gray">SST & ISO</span>
+            <span class="tag-red">Hodelpe S.A.C.</span>
+            <span class="tag-gray">CERTIFICADO</span>
           </div>
-          <h3>Homologación de Proveedores SGS</h3>
-          <p>Auditoría aprobada con puntaje destacado del 92.36% para servicios en plantas e instalaciones de Yura S.A.</p>
+          <h3>Homologación de Proveedores</h3>
+          <p>Certificación emitida por Corporación Hodelpe S.A.C. para INNOVAX INGENIEROS TECNOLOGÍA Y ELECTRICIDAD E.I.R.L., tras su evaluación en el proceso de homologación de proveedores solicitado por ON EMPRESAS S.A.C.</p>
           <div class="cert-footer-v2">
             <span class="status-live">● VIGENTE</span>
             <span class="cert-link-btn">Ampliar certificado →</span>
@@ -566,10 +1278,7 @@
       <p>Gestión técnica por etapas asegurando precisión, trazabilidad y máxima eficiencia en cada proyecto.</p>
     </div>
 
-    <!-- Flujo de pasos metodológicos -->
     <div class="process-grid-tech">
-    
-      <!-- Paso 1: Evaluación -->
       <div class="tech-step-card reveal-card" data-delay="100">
         <div class="step-header">
           <span class="step-badge">01</span>
@@ -587,7 +1296,6 @@
         </div>
       </div>
 
-      <!-- Paso 2: Propuesta -->
       <div class="tech-step-card reveal-card" data-delay="200">
         <div class="step-header">
           <span class="step-badge">02</span>
@@ -605,7 +1313,6 @@
         </div>
       </div>
 
-      <!-- Paso 3: Ejecución -->
       <div class="tech-step-card reveal-card" data-delay="300">
         <div class="step-header">
           <span class="step-badge">03</span>
@@ -615,7 +1322,7 @@
         </div>
         <div class="step-body">
           <h3>Ejecutamos</h3>
-          <p>Despliegue operativo y canalización bajo normativas strictly de calidad y seguridad industrial.</p>
+          <p>Despliegue operativo y canalización bajo normativas estrictas de calidad y seguridad industrial.</p>
         </div>
         <div class="step-footer">
           <span class="status-tag">Instalación</span>
@@ -623,7 +1330,6 @@
         </div>
       </div>
 
-      <!-- Paso 4: Entrega -->
       <div class="tech-step-card reveal-card" data-delay="400">
         <div class="step-header">
           <span class="step-badge">04</span>
@@ -640,12 +1346,9 @@
           <div class="connector-dot"></div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
-
-
 
 <!-- ==========================================
      SECCIÓN COTIZACIONES Y CONTACTO
@@ -653,26 +1356,20 @@
 <section class="section contact-section" id="contacto">
   <div class="container contact-grid">
 
-    <!-- Datos de contacto directo, mapa y canales -->
     <div class="contact-copy reveal-slide-right">
       <span class="section-kicker">COTIZACIONES</span>
       <h2>Cuéntanos qué necesitas.</h2>
       <p>Déjanos tus datos y una breve descripción de tu proyecto. Te contactaremos para revisar los detalles.</p>
 
       <div class="contact-details">
-        <!-- Canal de atención 01 -->
         <a href="https://wa.me/51987270326?text=Hola,%20quiero%20cotizar%20un%20servicio%20de:%20" target="_blank" rel="noopener">
           <span>WhatsApp 01</span>
           <strong>+51 987 270 326</strong>
         </a>
-
-        <!-- Canal de atención 02 -->
         <a href="https://wa.me/51958876858?text=Hola,%20quiero%20cotizar%20un%20servicio%20de:%20" target="_blank" rel="noopener">
           <span>WhatsApp 02</span>
           <strong>+51 958 876 858</strong>
         </a>
-
-        <!-- Ubicación física y mapa embebido -->
         <div>
           <span>Ubicación</span>
           <strong>Coop. Lanificio J-8, José Luis Bustamante y Rivero, Arequipa</strong>
@@ -683,7 +1380,6 @@
       </div>
     </div>
 
-    <!-- Formulario web para solicitud de cotización -->
     <form class="contact-form modern-form reveal-zoom-in" id="contactForm" action="php/enviar.php" method="POST">
       <div class="form-header">
         <h3>Solicitar Cotización</h3>
@@ -691,7 +1387,6 @@
       </div>
 
       <div class="form-row">
-        <!-- Campo: Nombre -->
         <div class="input-group">
           <label for="nombre">Nombre completo</label>
           <div class="input-wrapper">
@@ -700,7 +1395,6 @@
           </div>
         </div>
 
-        <!-- Campo: Teléfono -->
         <div class="input-group">
           <label for="telefono">Teléfono</label>
           <div class="input-wrapper">
@@ -711,7 +1405,6 @@
       </div>
 
       <div class="form-row">
-        <!-- Campo: Correo -->
         <div class="input-group">
           <label for="email">Correo electrónico</label>
           <div class="input-wrapper">
@@ -720,7 +1413,8 @@
           </div>
         </div>
 
-        <!-- Campo: Selección de Servicio -->
+
+
         <div class="input-group">
           <label for="servicio">Servicio de interés</label>
           <div class="input-wrapper">
@@ -735,7 +1429,6 @@
         </div>
       </div>
 
-      <!-- Campo: Mensaje / Descripción -->
       <div class="input-group full-width">
         <label for="mensaje">Cuéntanos sobre tu proyecto</label>
         <div class="input-wrapper textarea-wrapper">
@@ -744,16 +1437,13 @@
         </div>
       </div>
 
-      <!-- Campo Honeypot oculto para prevención de Spam -->
       <input type="text" name="empresa_web" class="hp-field" tabindex="-1" autocomplete="off" style="display:none;">
 
-      <!-- Botón de Envío -->
       <button type="submit" class="btn btn-primary btn-submit">
         <span>Enviar solicitud</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
       </button>
 
-      <!-- Mensaje de estado del envío -->
       <p id="formStatus" class="form-status"></p>
     </form>
 
@@ -767,8 +1457,6 @@
      ========================================== -->
 <footer class="site-footer">
   <div class="container footer-inner">
-    
-    <!-- Columna 1: Identidad visual y resumen corporativo -->
     <div class="footer-col footer-brand-col reveal-fade-up">
       <img src="assets/img/logoblanco.png" alt="INNOVAX Ingenieros" class="footer-logo" onerror="this.onerror=null; this.src='assets/img/logo.png';">
       <p class="footer-desc">
@@ -777,7 +1465,6 @@
       <span class="footer-badge">Ingeniería & Tecnología</span>
     </div>
 
-    <!-- Columna 2: Menú de navegación rápida -->
     <div class="footer-col reveal-fade-up">
       <h4 class="footer-title">Navegación</h4>
       <ul class="footer-links">
@@ -789,18 +1476,6 @@
       </ul>
     </div>
 
-    <!-- Columna 3: Enlaces directos a categorías de servicios -->
-    <div class="footer-col reveal-fade-up">
-      <h4 class="footer-title">Especialidades</h4>
-      <ul class="footer-links">
-        <li><a href="servicio.html?tipo=electrico">Sistemas Eléctricos</a></li>
-        <li><a href="servicio.html?tipo=redes">Redes & Conectividad</a></li>
-        <li><a href="servicio.html?tipo=generales">Servicios Generales</a></li>
-        <li><a href="servicio.html?tipo=redes">Cableado Estructurado</a></li>
-      </ul>
-    </div>
-
-    <!-- Columna 4: Información resumida de contacto directo -->
     <div class="footer-col reveal-fade-up">
       <h4 class="footer-title">Ubicación & Contacto</h4>
       <ul class="footer-contact-list">
@@ -814,28 +1489,20 @@
         </li>
       </ul>
     </div>
-
   </div>
 
-  <!-- Derechos reservados y copyright -->
   <div class="footer-bottom">
     <div class="container footer-bottom-inner">
       <p class="copyright">
-        © <span id="year"></span> <strong>INNOVAX Ingenieros S.A.C.</strong> Todos los derechos reservados.
+        © <span id="year"></span> <strong>INNOVAX INGENIEROS TECNOLOGÍA Y ELECTRICIDAD E.I.R.L.</strong> Todos los derechos reservados.
       </p>
     </div>
   </div>
 </footer>
 
-<!-- Botón flotante para contacto rápido vía WhatsApp -->
 <a href="https://wa.me/51987270326?text=Hola,%20me%20gustaria%20cotizar%20un%20proyecto%20con%20INNOVAX.%20Mi%20nombre%20es%20" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">☎</a>
-
-<!-- Botón para regresar al inicio (scroll top) -->
 <button class="back-top" id="backTop">↑</button>
 
-<!-- ==========================================
-     MODAL / LIGHTBOX PARA CERTIFICADOS
-     ========================================== -->
 <div class="image-lightbox" id="certLightbox">
   <button id="certLightboxClose" aria-label="Cerrar">&times;</button>
   <div class="lightbox-modal-content">
@@ -849,18 +1516,14 @@
       <div class="lightbox-divider"></div>
       <p id="certLightboxDesc" class="lightbox-desc"></p>
       <div class="lightbox-company-tag">
-        INNOVAX INGENIEROS E.I.R.L.
+        INNOVAX INGENIEROS TECNOLOGÍA Y ELECTRICIDAD E.I.R.L.
       </div>
     </div>
   </div>
 </div>
 
-<!-- Inclusión del script JavaScript principal -->
 <script src="js/main.js"></script>
-
-<!-- Script en línea para la gestión del modal de certificados y año actual -->
 <script>
-  // Función global para desplegar el visor emergente de certificados con datos dinámicos
   function openCertModal(imageSrc, title, subtitle, description) {
     const modal = document.getElementById('certLightbox');
     const img = document.getElementById('certLightboxImage');
@@ -877,15 +1540,12 @@
     }
   }
 
-  // Inicialización de eventos al cargar el árbol DOM
   document.addEventListener('DOMContentLoaded', function() {
-    // Actualización automática del año en el footer
     const yearSpan = document.getElementById('year');
     if (yearSpan) {
       yearSpan.textContent = new Date().getFullYear();
     }
 
-    // Lógica para cerrar el modal de certificados mediante el botón o haciendo clic en el overlay
     const certModal = document.getElementById('certLightbox');
     const closeBtn = document.getElementById('certLightboxClose');
 
@@ -901,6 +1561,72 @@
           certModal.classList.remove('active');
         }
       });
+    }
+
+    /* Acordeón de áreas de servicio: al hacer click se despliegan/ocultan sus proyectos */
+    document.querySelectorAll('.area-header').forEach(function(header) {
+      header.addEventListener('click', function() {
+        const card = header.closest('.area-card');
+        if (card) card.classList.toggle('open');
+      });
+    });
+
+    /* Menú móvil */
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', function() {
+        menuToggle.classList.toggle('active');
+        mainNav.classList.toggle('active');
+      });
+      mainNav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          menuToggle.classList.remove('active');
+          mainNav.classList.remove('active');
+        });
+      });
+    }
+
+    /* Header con sombra al hacer scroll + botón volver arriba */
+    const header = document.getElementById('header');
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', function() {
+      const y = window.scrollY;
+      if (header) header.classList.toggle('scrolled', y > 30);
+      if (backTop) backTop.classList.toggle('show', y > 500);
+    });
+    if (backTop) {
+      backTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    /* Animaciones al aparecer/desaparecer con el scroll (sube y baja) */
+    const revealEls = document.querySelectorAll(
+      '.reveal-fade-up, .reveal-slide-left, .reveal-slide-right, .reveal-card, .reveal-zoom-in'
+    );
+    revealEls.forEach(function(el) {
+      const delay = el.getAttribute('data-delay');
+      if (delay) el.style.transitionDelay = delay + 'ms';
+    });
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          const el = entry.target;
+          if (entry.isIntersecting) {
+            el.classList.add('in-view');
+            /* Las tarjetas de servicio (acordeón) no vuelven a ocultarse al abrir/cerrar */
+            if (el.classList.contains('area-card')) {
+              revealObserver.unobserve(el);
+            }
+          } else if (!el.classList.contains('area-card')) {
+            el.classList.remove('in-view');
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(function(el) { revealObserver.observe(el); });
+    } else {
+      revealEls.forEach(function(el) { el.classList.add('in-view'); });
     }
   });
 </script>
